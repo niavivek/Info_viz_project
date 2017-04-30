@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+.node {
+  font: 700 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  fill: #bbb;
+}
+
+.node:hover {
+  fill: #000;
+}
+.fakehover {
+  fill: black;
+}
+
+.link {
+  stroke: steelblue;
+  stroke-opacity: 0.4;
+  stroke-width: 1px;
+  fill: none;
+  pointer-events: none;
+}
+.director{
+  fill: darkkhaki;
+}
+.actor{
+  fill: lightsalmon;
+}
+
+.node:hover,
+.node--source,
+.node--target {
+  font-weight: 900;
+}
+
+.node--source {
+  fill: #2ca02c;
+}
+
+.node--target {
+  fill: #d62728;
+
+}
+
+.link--source,
+.link--target {
+  stroke-opacity: 1;
+  stroke-width: 2px;
+}
+
+.link--source {
+  stroke: #d62728;
+}
+
+.link--target {
+  stroke: #2ca02c;
+}
+
+</style>
+<body>
+<h3 align="center">Directors associated with award winning actors 1995-2016</h3>
+
+<!-- </header> -->
+<div id="selection">
+&nbsp;&nbsp;&nbsp;Select director:
+<select name ="direc" onchange="directorSelector()" id="direc">
+<option selected disabled>Choose here</option>
+<option value="Ed Harris">Ed Harris</option>
+<option value="Damien Chazelle">Damien Chazelle</option>
+<option value="Jonathan Dayton">Jonathan Dayton</option>
+<option value="John Lee Hancock">John Lee Hancock</option>
+<option value="Jean-Marc Vallee">Jean-Marc Vallee</option>
+<option value="Patty Jenkins">Patty Jenkins</option>
+<option value="Richard Glatzer">Richard Glatzer</option>
+<option value="Curtis Hanson">Curtis Hanson</option>
+<option value="Tom Hooper">Tom Hooper</option>
+<option value="Mike Figgis">Mike Figgis</option>
+<option value="Olivier Dahan">Olivier Dahan</option>
+<option value="Paul Schrader">Paul Schrader</option>
+<option value="Scott Cooper">Scott Cooper</option>
+<option value="John Madden">John Madden</option>
+<option value="David O Russell">David O. Russell</option>
+<option value="Darren Aronofsky">Darren Aronofsky</option>
+<option value="Bryan Singer">Bryan Singer</option>
+<option value="Tony Gilroy">Tony Gilroy</option>
+<option value="Fernando Meirelles">Fernando Meirelles</option>
+<option value="James Marsh">James Marsh</option>
+<option value="Antoine Fuqua">Antoine Fuqua</option>
+<option value="Gus Van Sant">Gus Van Sant</option>
+<option value="Tate Taylor">Tate Taylor</option>
+<option value="Stephen Daldry">Stephen Daldry</option>
+<option value="Martin Scorsese">Martin Scorsese</option>
+<option value="Cameron Crowe">Cameron Crowe</option>
+<option value="James L Brooks">James L. Brooks</option>
+<option value="Bill Condon">Bill Condon</option>
+<option value="Kevin Macdonald">Kevin Macdonald</option>
+<option value="Stephen Frears">Stephen Frears</option>
+<option value="Stephen Gaghan">Stephen Gaghan</option>
+<option value="Steven Spielberg">Steven Spielberg</option>
+<option value="Christopher Nolan">Christopher Nolan</option>
+<option value="Marc Forster">Marc Forster</option>
+<option value="Woody Allen">Woody Allen</option>
+<option value="Lenny Abrahamson">Lenny Abrahamson</option>
+<option value="Denzel Washington">Denzel Washington</option>
+<option value="Taylor Hackford">Taylor Hackford</option>
+<option value="Clint Eastwood">Clint Eastwood</option>
+<option value="Steven Soderbergh">Steven Soderbergh</option>
+<option value="Sam Mendes">Sam Mendes</option>
+<option value="Michel Hazanavicius">Michel Hazanavicius</option>
+<option value="Scott Hicks">Scott Hicks</option>
+<option value="Rob Marshall">Rob Marshall</option>
+<option value="Steve McQueen">Steve McQueen</option>
+<option value="James Mangold">James Mangold</option>
+<option value="Phyllida Lloyd">Phyllida Lloyd</option>
+<option value="Quentin Tarantino">Quentin Tarantino</option>
+<option value="Richard Eyre">Richard Eyre</option>
+<option value="Barry Jenkins">Barry Jenkins</option>
+<option value="Spike Jonze">Spike Jonze</option>
+<option value="Ron Howard">Ron Howard</option>
+<option value="Alejandro Gonzalez inarritu">Alejandro Gonzalez inarritu</option>
+<option value="Kimberly Peirce">Kimberly Peirce</option>
+<option value="Ridley Scott">Ridley Scott</option>
+<option value="Lasse Hallstrom">Lasse Hallstrom</option>
+<option value="Mike Mills">Mike Mills</option>
+<option value="Joel Coen">Joel Coen</option>
+<option value="Roberto Benigni">Roberto Benigni</option>
+<option value="Kenneth Lonergan">Kenneth Lonergan</option>
+<option value="Bennett Miller">Bennett Miller</option>
+<option value="Ethan Coen">Ethan Coen</option>
+<option value="Roman Polanski">Roman Polanski</option>
+<option value="Paul Thomas Anderson">Paul Thomas Anderson</option>
+<option value="Richard Linklater">Richard Linklater</option>
+<option value="Anthony Minghella">Anthony Minghella</option>
+<option value="Tim Robbins">Tim Robbins</option>
+</select>
+</div>
+<button type="reset" value="Reset" id = "reset" onclick="resetSelector()">Reset</button>
+<div id = "fullcontainer" style="width:1500px;height:700px;">
+
+
+<div class = "container" id = "container" style="width:400px;height:200px;float:left;"></div>
+<div class = "container1" id = "container1" style="width:1000px;height:200px;float:right;"></div>
+</div>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+
+
+
+var diameter = 760,
+    radius = diameter / 2,
+    innerRadius = radius - 120;
+
+var cluster = d3.cluster()
+    .size([360, innerRadius]);
+
+var line = d3.radialLine()
+    .curve(d3.curveBundle.beta(0.85))
+    .radius(function(d) { return d.y; })
+    .angle(function(d) { return d.x / 180 * Math.PI; });
+
+var svg = d3.select("#container").append("svg")
+    .attr("width", diameter)
+    .attr("height", diameter)
+  .append("g")
+    .attr("transform", "translate(" + radius + "," + radius + ")");
+
+var link = svg.append("g").selectAll(".link"),
+    node = svg.append("g").selectAll(".node");
+
+
+d3.json("flare.json", function(error, classes) {
+  if (error) throw error;
+
+  var root = packageHierarchy(classes)
+      .sum(function(d) { return d.size; });
+
+  cluster(root);
+  
+  link = link
+    .data(packageImports(root.leaves()))
+    .enter().append("path")
+      .each(function(d) { d.source = d[0], d.target = d[d.length - 1]; })
+      .attr("class", "link")
+      .attr("d", line);
+
+  node = node
+    .data(root.leaves())
+    .enter().append("text")
+      .attr("class", "node")
+      .attr("id","node")
+      .attr("dy", "0.31em")
+      .attr("transform", function(d) { return "rotate(" + (d.x - 90) + ")translate(" + (d.y + 8) + ",0)" + (d.x < 180 ? "" : "rotate(180)"); })
+      .attr("text-anchor", function(d) { return d.x < 180 ? "start" : "end"; })
+      .text(function(d) {  return d.data.key; })
+      .on("mouseover", mouseovered)
+      .on("mouseout", mouseouted)
+      .classed("director", function(d) { if (d.data.parent.key === 'director') return d.data;})
+      .classed("actor", function(d) { if (d.data.parent.key === 'actorlead') return d.data;});
+
+});
+
+var actors = {"values": [{"name": "Emma Stone", "role": ["Lead Actress"], "film": ["La La Land"]}, {"name": "Christian Bale", "role": ["Supporting Actor"], "film": ["The Fighter"]}, {"name": "Leonardo DiCaprio", "role": ["Lead Actor"], "film": ["The Revenant"]}, {"name": "Helen Mirren", "role": ["Lead Actress"], "film": ["The Queen"]}, {"name": "Colin Firth", "role": ["Lead Actor"], "film": ["The King's Speech"]}, {"name": "Geoffrey Rush", "role": ["Lead Actor"], "film": ["Shine"]}, {"name": "Gwyneth Paltrow", "role": ["Lead Actress"], "film": ["Shakespeare in Love"]}, {"name": "Eddie Redmayne", "role": ["Lead Actor"], "film": ["The Theory of Everything"]}, {"name": "Julianne Moore", "role": ["Lead Actress"], "film": ["Still Alice"]}, {"name": "Helen Hunt", "role": ["Lead Actress"], "film": ["As Good as It Gets"]}, {"name": "Michael Caine", "role": ["Supporting Actor"], "film": ["The Cider House Rules"]}, {"name": "Melissa Leo", "role": ["Supporting Actress"], "film": ["The Fighter"]}, {"name": "Jennifer Hudson", "role": ["Supporting Actress"], "film": ["Dreamgirls"]}, {"name": "Brie Larson", "role": ["Lead Actress"], "film": ["Room"]}, {"name": "Javier Bardem", "role": ["Supporting Actor"], "film": ["No Country for Old Men"]}, {"name": "James Coburn", "role": ["Supporting Actor"], "film": ["Affliction"]}, {"name": "Nicole Kidman", "role": ["Lead Actress"], "film": ["The Hours"]}, {"name": "Cuba Gooding, Jr", "role": ["Supporting Actor"], "film": ["Jerry Maguire"]}, {"name": "J K Simmons", "role": ["Supporting Actor"], "film": ["Whiplash"]}, {"name": "Kim Basinger", "role": ["Supporting Actress"], "film": ["L.A. Confidential"]}, {"name": "Juliette Binoche", "role": ["Supporting Actress"], "film": ["The English Patient"]}, {"name": "Judi Dench", "role": ["Supporting Actress"], "film": ["Shakespeare in Love"]}, {"name": "Mark Rylance", "role": ["Supporting Actor"], "film": ["Bridge of Spies"]}, {"name": "Anne Hathaway", "role": ["Supporting Actress"], "film": ["Les Miserables"]}, {"name": "Renee Zellweger", "role": ["Supporting Actress"], "film": ["Cold Mountain"]}, {"name": "Jared Leto", "role": ["Supporting Actor"], "film": ["Dallas Buyers Club"]}, {"name": "Lupita Nyong'o", "role": ["Supporting Actress"], "film": ["12 Years a Slave"]}, {"name": "Patricia Arquette", "role": ["Supporting Actress"], "film": ["Boyhood"]}, {"name": "Daniel Day-Lewis", "role": ["Lead Actor", "Lead Actor"], "film": ["There Will Be Blood", "Lincoln"]}, {"name": "Natalie Portman", "role": ["Lead Actress"], "film": ["Black Swan"]}, {"name": "Russell Crowe", "role": ["Lead Actor"], "film": ["Gladiator"]}, {"name": "Susan Sarandon", "role": ["Lead Actress"], "film": ["Dead Man Walking"]}, {"name": "Alan Arkin", "role": ["Supporting Actor"], "film": ["Little Miss Sunshine"]}, {"name": "Rachel Weisz", "role": ["Supporting Actress"], "film": ["The Constant Gardener"]}, {"name": "George Clooney", "role": ["Supporting Actor", "Supporting Actor"], "film": ["Syriana", "Syriana"]}, {"name": "Penelope Cruz", "role": ["Supporting Actress"], "film": ["Vicky Cristina Barcelona"]}, {"name": "Angelina Jolie", "role": ["Supporting Actress"], "film": ["Girl, Interrupted"]}, {"name": "Robin Williams", "role": ["Supporting Actor"], "film": ["Good Will Hunting"]}, {"name": "Mira Sorvino", "role": ["Supporting Actress"], "film": ["Mighty Aphrodite"]}, {"name": "Frances McDormand", "role": ["Lead Actress"], "film": ["Fargo"]}, {"name": "Halle Berry", "role": ["Lead Actress"], "film": ["Monster's Ball"]}, {"name": "Jamie Foxx", "role": ["Lead Actor"], "film": ["Ray"]}, {"name": "Tilda Swinton", "role": ["Supporting Actress"], "film": ["Michael Clayton"]}, {"name": "Denzel Washington", "role": ["Lead Actor"], "film": ["Training Day"]}, {"name": "Charlize Theron", "role": ["Lead Actress"], "film": ["Monster"]}, {"name": "Jack Nicholson", "role": ["Lead Actor"], "film": ["As Good as It Gets"]}, {"name": "Morgan Freeman", "role": ["Supporting Actor"], "film": ["Million Dollar Baby"]}, {"name": "Kate Winslet", "role": ["Lead Actress"], "film": ["The Reader"]}, {"name": "Benicio Del Toro", "role": ["Supporting Actor"], "film": ["Traffic"]}, {"name": "Christopher Plummer", "role": ["Supporting Actor"], "film": ["Beginners"]}, {"name": "Cate Blanchett", "role": ["Lead Actress", "Supporting Actress"], "film": ["Blue Jasmine", "The Aviator"]}, {"name": "Viola Davis", "role": ["Supporting Actress"], "film": ["Fences"]}, {"name": "Marion Cotillard", "role": ["Lead Actress"], "film": ["La Vie en Rose"]}, {"name": "Casey Affleck", "role": ["Lead Actor"], "film": ["Manchester by the Sea"]}, {"name": "Sandra Bullock", "role": ["Lead Actress"], "film": ["The Blind Side"]}, {"name": "Heath Ledger", "role": ["Supporting Actor"], "film": ["The Dark Knight"]}, {"name": "Kevin Spacey", "role": ["Lead Actor", "Supporting Actor"], "film": ["American Beauty", "The Usual Suspects"]}, {"name": "Matthew McConaughey", "role": ["Lead Actor"], "film": ["Dallas Buyers Club"]}, {"name": "Alicia Vikander", "role": ["Supporting Actress"], "film": ["The Danish Girl"]}, {"name": "Hilary Swank", "role": ["Lead Actress", "Lead Actress"], "film": ["Boys Don't Cry", "Million Dollar Baby"]}, {"name": "Octavia Spencer", "role": ["Supporting Actress"], "film": ["The Help"]}, {"name": "Reese Witherspoon", "role": ["Lead Actress"], "film": ["Walk the Line"]}, {"name": "Jennifer Lawrence", "role": ["Lead Actress"], "film": ["Silver Linings Playbook"]}, {"name": "Forest Whitaker", "role": ["Lead Actor"], "film": ["The Last King of Scotland"]}, {"name": "Jeff Bridges", "role": ["Lead Actor"], "film": ["Crazy Heart"]}, {"name": "Jennifer Connelly", "role": ["Supporting Actress"], "film": ["A Beautiful Mind"]}, {"name": "Philip Seymour Hoffman", "role": ["Lead Actor"], "film": ["Capote"]}, {"name": "Mahershala Ali", "role": ["Supporting Actor"], "film": ["Moonlight"]}, {"name": "Christoph Waltz", "role": ["Supporting Actor", "Supporting Actor"], "film": ["Inglourious Basterds", "Django Unchained"]}, {"name": "Adrien Brody", "role": ["Lead Actor"], "film": ["The Pianist"]}, {"name": "Jim Broadbent", "role": ["Supporting Actor"], "film": ["Iris"]}, {"name": "Meryl Streep", "role": ["Lead Actress"], "film": ["The Iron Lady"]}, {"name": "Marcia Gay Harden", "role": ["Supporting Actress"], "film": ["Pollock"]}, {"name": "Roberto Benigni", "role": ["Lead Actor"], "film": ["Life Is Beautiful"]}, {"name": "Chris Cooper", "role": ["Supporting Actor"], "film": ["Adaptation"]}, {"name": "Julia Roberts", "role": ["Lead Actress"], "film": ["Erin Brockovich"]}, {"name": "Nicolas Cage", "role": ["Lead Actor"], "film": ["Leaving Las Vegas"]}, {"name": "Sean Penn", "role": ["Lead Actor", "Lead Actor"], "film": ["Mystic River", "Milk"]}, {"name": "Catherine Zeta-Jones", "role": ["Supporting Actress"], "film": ["Chicago"]}, {"name": "Jean Dujardin", "role": ["Lead Actor"], "film": ["The Artist"]}, {"name": "Tim Robbins", "role": ["Supporting Actor"], "film": ["Mystic River"]}]};
+
+
+var directorSelector = function (d) {
+  var element = document.getElementById("direc");
+  var d = element.options[element.selectedIndex].value;
+
+  node
+      .classed(".node", function(n) { if(n.data.key === d) { mouseovered(n)}; })
+      .classed(".fakehover", function(n) { if (n.data.key === d) { return n.source = true; } });
+
+
+
+}
+// Define the div for the tooltip
+var tooltip = d3.select("#container1")
+    .style("position", "relative")
+    .style("z-index", "10")
+    .style("visibility", "hidden")
+    .text("a simple tooltip");
+
+var resetSelector = function (d) {
+  var element = document.getElementById("reset");
+  var d = element.value;
+  
+  if (d === "Reset")
+  {
+   link
+      .classed("link--target", false)
+      .classed("link--source", false);
+
+  node
+      .classed("node--target", false)
+      .classed("node--source", false);
+    document.getElementById("direc").value= "default";
+    tooltip.style("visibility", "hidden");
+    }
+
+
+}
+
+function mouseovered(d) {
+
+  node
+      .each(function(n) { n.target = n.source = false; });
+
+  link
+      .classed("link--target", function(l) {  if (l.target === d) { return l.source.source = true; }})
+      .classed("link--source", function(l) { if (l.source === d) { return l.target.target = true; }})
+    .filter(function(l) { return l.target === d || l.source === d; })
+      .raise();
+
+  node
+      .classed("node--target", function(n) { return n.target; })
+      .classed("node--source", function(n) { return n.source; })
+
+  var i =0;
+  var fulltext = "";
+
+  while(i<d.data.imports.length)
+  {
+     j = d.data.imports[i].lastIndexOf(".");
+     fulltext = fulltext + "Actor: " + d.data.imports[i].substring(j + 1) + ', Role: ' + d.data.role[i] + ", Movie: " + d.data.film[i]+ ";";
+     i++;
+  };
+   j = d.data.name.lastIndexOf(".");
+  
+   if(fulltext === "")
+   {
+  for(i=0;i<actors.values.length;i++)
+  {
+    
+  if(actors.values[i].name === d.data.name.substring(j + 1))
+    {
+      fulltext = fulltext + "Actor: " +actors.values[i].name;
+      k = 0;
+      while(k < actors.values[i].role.length)
+      {
+      fulltext = fulltext + ", Role: "+actors.values[i].role[k] +", Movie: "+actors.values[i].film[k]+";";
+      k++;
+      }
+    }
+  };
+};
+
+  tooltip.text(fulltext)
+  
+  tooltip.style("visibility", "visible");
+    
+      
+}
+
+function mouseouted(d) {
+  link
+      .classed("link--target", false)
+      .classed("link--source", false);
+
+  node
+      .classed("node--target", false)
+      .classed("node--source", false);
+      tooltip.style("visibility", "hidden");
+  directorSelector(d)
+  
+      
+}
+
+// Lazily construct the package hierarchy from class names.
+function packageHierarchy(classes) {
+  var map = {};
+
+  function find(name, data) {
+    var node = map[name], i;
+
+    if (!node) {
+      node = map[name] = data || {name: name, children: []};
+      if (name.length) {
+        node.parent = find(name.substring(0, i = name.lastIndexOf(".")));
+        node.parent.children.push(node);
+        node.key = name.substring(i + 1);
+      }
+    }
+    
+    return node;
+  }
+
+  classes.forEach(function(d) {
+    find(d.name, d);
+  });
+
+  return d3.hierarchy(map[""]);
+}
+
+// Return a list of imports for the given array of nodes.
+function packageImports(nodes) {
+  var map = {},
+      imports = [];
+
+  // Compute a map from name to node.
+  nodes.forEach(function(d) {
+    map[d.data.name] = d;
+  });
+
+  // For each import, construct a link from the source to target node.
+  nodes.forEach(function(d) {
+    
+    if (d.data.imports) d.data.imports.forEach(function(i) {
+      imports.push(map[d.data.name].path(map[i]));
+    });
+  });
+
+  return imports;
+}
+
+</script>
