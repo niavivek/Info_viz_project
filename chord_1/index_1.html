@@ -62,7 +62,7 @@
 <h3 align="center">Directors associated with award winning actors 1995-2016</h3>
 
 <!-- </header> -->
-<div id="selection">
+<div id="selection" style="float:right;">
 &nbsp;&nbsp;&nbsp;Select director:
 <select name ="direc" onchange="directorSelector()" id="direc">
 <option selected disabled>Choose here</option>
@@ -134,13 +134,14 @@
 <option value="Anthony Minghella">Anthony Minghella</option>
 <option value="Tim Robbins">Tim Robbins</option>
 </select>
-</div>
 <button type="reset" value="Reset" id = "reset" onclick="resetSelector()">Reset</button>
-<div id = "fullcontainer" style="width:1500px;height:700px;">
+</div>
+
+<div id = "fullcontainer" style="width:1500px;height:900px;padding:10px 5px 15px 20px;">
 
 
-<div class = "container" id = "container" style="width:400px;height:200px;float:left;"></div>
-<div class = "container1" id = "container1" style="width:1000px;height:200px;float:right;"></div>
+<div class = "container" id = "container" style="width:500px;height:600px;float:left;padding:15px 5px 15px 10px;"></div>
+<div class = "container1" id = "container1" style="width:700px;height:600px;float:right;padding:10px 5px 15px 20px;"></div>
 </div>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -150,7 +151,7 @@
 
 var diameter = 760,
     radius = diameter / 2,
-    innerRadius = radius - 120;
+    innerRadius = radius - 135;
 
 var cluster = d3.cluster()
     .size([360, innerRadius]);
@@ -262,8 +263,13 @@ function mouseovered(d) {
 
   while(i<d.data.imports.length)
   {
+    if(i === 0)
+    {
+      l = d.data.name.lastIndexOf(".");
+      fulltext = fulltext + "Director: " + d.data.name.substring(l+1)+"<br/>"
+    }
      j = d.data.imports[i].lastIndexOf(".");
-     fulltext = fulltext + "Actor: " + d.data.imports[i].substring(j + 1) + ', Role: ' + d.data.role[i] + ", Movie: " + d.data.film[i]+ ";";
+     fulltext = fulltext + "Actor: " + d.data.imports[i].substring(j + 1) + ', Award: Best ' + d.data.role[i] + ", Movie: " + d.data.film[i]+ " <br/>";
      i++;
   };
    j = d.data.name.lastIndexOf(".");
@@ -275,18 +281,18 @@ function mouseovered(d) {
     
   if(actors.values[i].name === d.data.name.substring(j + 1))
     {
-      fulltext = fulltext + "Actor: " +actors.values[i].name;
+      fulltext = fulltext + "Actor: " +actors.values[i].name + "<br/>";
       k = 0;
       while(k < actors.values[i].role.length)
       {
-      fulltext = fulltext + ", Role: "+actors.values[i].role[k] +", Movie: "+actors.values[i].film[k]+";";
+      fulltext = fulltext + "Award: Best "+actors.values[i].role[k] +", Movie: "+actors.values[i].film[k]+"<br/>";
       k++;
       }
     }
   };
 };
+  document.getElementById('container1').innerHTML = fulltext;
 
-  tooltip.text(fulltext)
   
   tooltip.style("visibility", "visible");
     
