@@ -59,7 +59,7 @@
 
 </style>
 <body>
-<h3 align="center">Directors associated with award winning actors 1995-2016</h3>
+<h2 align="center">Directors associated with award winning actors 1995-2016</h2>
 
 <!-- </header> -->
 <div id="selection" style="float:right;">
@@ -136,19 +136,48 @@
 </select>
 <button type="reset" value="Reset" id = "reset" onclick="resetSelector()">Reset</button>
 </div>
+<div id = "key">
+  <h3>Key</h3>
+  <div class="legend1" id="legend1" ></div><span>Director</span><br/><br/>
+  <div class="legend2" id="legend2" ></div><span>Actor</span>
+</div>
 
-<div id = "fullcontainer" style="width:1500px;height:900px;padding:10px 5px 15px 20px;">
+<div id = "fullcontainer" style="width:1500px;height:700px;padding:10px 5px 15px 20px;">
 
 
 <div class = "container" id = "container" style="width:500px;height:600px;float:left;padding:15px 5px 15px 10px;"></div>
 <div class = "container1" id = "container1" style="width:700px;height:600px;float:right;padding:10px 5px 15px 20px;"></div>
+
+
 </div>
+
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>
 
+var legend1 = d3.select("#legend1")
+      .attr("style", "float: left; height: 30px; width: 30px; ")
+      .append("svg")
+        .attr("width", 15)
+        .attr("height", 15)
+        .append("rect")
+          .attr("width", 15)
+          .attr("height", 15)
+          .attr("fill", "darkkhaki")
+          .attr("id", "legend1");
 
-
+legend1.append("text").text("Director") ;         
+var legend2 = d3.select("#legend2")
+      .attr("style", "float: left; height: 30px; width: 30px;")
+      .append("svg")
+        .attr("width", 15)
+        .attr("height", 15)
+        .append("rect")
+          .attr("width", 15)
+          .attr("height", 15)
+          .attr("fill", "lightsalmon")
+          .attr("id", "legend2");
+legend2.append("text").text("Actor");
 var diameter = 760,
     radius = diameter / 2,
     innerRadius = radius - 135;
