@@ -3,7 +3,7 @@
 <style>
 
 .node {
-  font: 700 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 500 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
   fill: #bbb;
 }
 
@@ -63,7 +63,7 @@
 
 <!-- </header> -->
 <div id="selection" style="float:right;">
-&nbsp;&nbsp;&nbsp;Select director:
+&nbsp;&nbsp;&nbsp;<b>Select director:</b>
 <select name ="direc" onchange="directorSelector()" id="direc">
 <option selected disabled>Choose here</option>
 <option value="Ed Harris">Ed Harris</option>
@@ -266,10 +266,10 @@ function mouseovered(d) {
     if(i === 0)
     {
       l = d.data.name.lastIndexOf(".");
-      fulltext = fulltext + "Director: " + d.data.name.substring(l+1)+"<br/>"
+      fulltext = fulltext + "<b>Director:</b> " + d.data.name.substring(l+1)+"<br/>"
     }
      j = d.data.imports[i].lastIndexOf(".");
-     fulltext = fulltext + "Actor: " + d.data.imports[i].substring(j + 1) + ', Award: Best ' + d.data.role[i] + ", Movie: " + d.data.film[i]+ " <br/>";
+     fulltext = fulltext + "<b>Actor:</b> " + d.data.imports[i].substring(j + 1) + ', <b>Award:</b> Best ' + d.data.role[i] + ", <b>Movie:</b> " + d.data.film[i]+ " <br/>";
      i++;
   };
    j = d.data.name.lastIndexOf(".");
@@ -281,11 +281,11 @@ function mouseovered(d) {
     
   if(actors.values[i].name === d.data.name.substring(j + 1))
     {
-      fulltext = fulltext + "Actor: " +actors.values[i].name + "<br/>";
+      fulltext = fulltext + "<b>Actor:</b> " +actors.values[i].name + "<br/>";
       k = 0;
       while(k < actors.values[i].role.length)
       {
-      fulltext = fulltext + "Award: Best "+actors.values[i].role[k] +", Movie: "+actors.values[i].film[k]+"<br/>";
+      fulltext = fulltext + "<b>Award:</b> Best "+actors.values[i].role[k] +", <b>Movie:</b> "+actors.values[i].film[k]+"<br/>";
       k++;
       }
     }
