@@ -1,0 +1,299 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Visualization</title>
+    <link rel="stylesheet" href="scatter.css" charset="utf-8">
+  </head>
+  <body>
+
+ <!--  <nav> -->
+    <!-- <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Logo</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="badges.html">Actors</a></li>
+        <li><a href="collapsible.html">J</a></li>
+      </ul>
+    </div>
+  </nav> -->
+
+ <!--  <a class="waves-effect waves-light btn">button</a>
+<a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>button</a>
+<a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>button</a> -->
+        
+
+
+    <div id="scatter" style="float:left;width:700px; height:440px;margin-bottom: 50px; margin-left: 10px; margin-right: 5px"></div>
+   <!--  <div id="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTQzMjkwNTQ2OF5BMl5BanBnXkFtZTgwNTQ4MTQ4MTE@._V1_UY317_CR18,0,214,317_AL_.jpg" alt="Smiley face" height="100" width="50" style="float:right;width:300px; height:440px;margin-bottom: 10px; margin-right: 25px; margin-left: 50px; border: 20px solid ; border-color: red; border-radius: 10px">
+    </div> -->
+
+
+ <div id="buttons" style="float:left;width:600px; height:150px;margin-bottom: 10px; margin-right: 400px;border: 20px solid ; border-color: white; border-radius: 10px">
+     
+
+    <!-- reference: http://bl.ocks.org/peterssonjonas/4a0e7cb8d23231243e0e -->
+    <!-- <input type="button" name="xAxis" value="xAxis"> -->
+    <form name="myform" onSubmit="return handleClick()">
+        <input type="text" id="myVal" placeholder="Search movie">
+        <input name="Submit"  type="submit" value="Search!" >
+   </form>  
+
+    <form name="myform2" onSubmit="return actorClick()"> 
+        <input type="text" id="myVal2" placeholder="Search actor">
+        <input name="Submit"  type="submit" value="Search!" >
+   </form>  
+
+   <form name="myform3" onSubmit="return DirectorClick()"> 
+        <input type="text" id="myVal3" placeholder="Search Director">
+        <input name="Submit"  type="submit" value="Search!" >
+   </form> 
+
+   <form name="myform4" onSubmit="return GenreClick()"> 
+        <input type="text" id="myVal4" placeholder="Search Genre">
+        <input name="Submit"  type="submit" value="Search!" >
+        <!-- <button type="button" onclick="alert('Hello world!')">Click Me!</button> -->
+   </form> 
+      </div>
+
+   <div id="option1" style="float:left;width:900px; height:150px;margin-top: 10px; margin-right: 25px">
+    <input name="updateButton" 
+           type="button" 
+           value="Adventure" 
+           id = "button1"
+           onclick="Adventure()" />
+
+    <input name="updateButton" 
+           type="button" 
+           value="Comedy" 
+           id = "button2"
+           onclick="Comedy()" />
+
+    <input name="updateButton" 
+           type="button" 
+           value="Biography" 
+           id = "button3"
+           onclick="Bio()" />
+
+        <input name="updateButton" 
+           type="button" 
+           value="Action" 
+           id = "button4"
+           onclick="Action()" />
+
+      <input name="updateButton" 
+           type="button" 
+           value="Crime" 
+           id = "button5"
+           onclick="Crime()" />
+
+               <input name="updateButton" 
+           type="button" 
+           value="Drama" 
+           id = "button6"
+           onclick="Drama()" />
+
+               <input name="updateButton" 
+           type="button" 
+           value="History" 
+           id = "button7"
+           onclick="History()" />
+
+               <input name="updateButton" 
+           type="button" 
+           value="Music" 
+           id = "button8"
+           onclick="Music()" />
+
+               <input name="updateButton" 
+           type="button" 
+           value="Mystery" 
+           id = "button9"
+           onclick="Mystery()" />
+
+               <input name="updateButton" 
+           type="button" 
+           value="Romance" 
+           id = "button10"
+           onclick="Rom()" />
+
+               <input name="updateButton" 
+           type="button" 
+           value="Sport" 
+           id = "button11"
+           onclick="Sport()" />
+
+               <input name="updateButton" 
+           type="button" 
+           value="Western" 
+           id = "button12"
+           onclick="West()" />
+
+             <input name="updateButton" 
+           type="button" 
+           value="Sport" 
+           id = "button13"
+           onclick="Sport()" />
+
+               <input name="updateButton" 
+           type="button" 
+           value="Thrill" 
+           id = "button14"
+           onclick="Thrill()" />
+
+           <input name="updateButton" 
+           type="button" 
+           value="War" 
+           id = "button15"
+           onclick="War()" />
+
+           <input name="updateButton" 
+           type="button" 
+           value="Reset" 
+           id = "button16"
+           onclick="reset()" />
+</div>
+
+
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+    <script src="scatter.js" charset="utf-8"></script>
+  </body>
+</html>
+
+
+
+<!-- 
+
+ 
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+body {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.dot {
+  stroke: #000;
+}
+
+</style>
+<body>
+<script src="//d3js.org/d3.v3.min.js"></script> 
+<script type="text/javascript" src="http://d3js.org/d3.v3.js"></script>
+<script type="text/javascript" src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+<script src="scatter.js" charset="utf-8"></script>
+<script>
+var margin = {top: 20, right: 20, bottom: 30, left: 40},
+    width = 960 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+
+var x = d3.scale.linear()
+    .range([0, width]);
+
+var y = d3.scale.linear()
+    .range([height, 0]);
+
+var color = d3.scale.linear().range(["#8fceef", "#ffff8c"])
+    // .range(['yellow', 'red']);
+
+// d3.scale.category10();
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom");
+
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left");
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+d3.csv("awardnum2.csv", function(error, data) {
+  if (error) throw error;
+
+  // data.forEach(function(d) {
+  //   d.sepalLength = +d.sepalLength;
+  //   d.sepalWidth = +d.sepalWidth;
+  // });
+  data.forEach(function(d) {
+    d.critic_score = +d.critic_score;
+    d.imdb_score = +d.imdb_score;
+    d.Winner = +d.Winner
+  });
+
+ 
+  // x.domain(d3.extent(data, function(d) { return d.critic_score; })).nice();
+  x.domain([0, d3.max(data, function(d) { return d.critic_score;})]).nice();
+  y.domain([0, d3.max(data, function(d) { return d.imdb_score;})]).nice();
+  color.domain(d3.extent(data, function(d) { return d.budget; })).nice();
+
+  // y.domain(d3.extent(data, function(d) { return d.imdb_score; })).nice();
+
+  svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(xAxis)
+    .append("text")
+      .attr("class", "label")
+      .attr("x", width)
+      .attr("y", -6)
+      .style("text-anchor", "end")
+      .text("Critic Score");
+
+  svg.append("g")
+      .attr("class", "y axis")
+      .call(yAxis)
+    .append("text")
+      .attr("class", "label")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 6)
+      .attr("dy", ".71em")
+      .style("text-anchor", "end")
+      .text("IMDB Score")
+
+  svg.selectAll(".dot")
+      .data(data)
+    .enter().append("circle")
+      .attr("class", "dot")
+      .attr("r", function(d) { if (d.Winner == 0) { return 3; } else if ((d.Winner == 1)){ return 4; } else { return d.Winner*2;} })
+      .attr("cx", function(d) { return x(d.critic_score); })
+      .attr("cy", function(d) { return y(d.imdb_score); })
+      .style("fill", function(d) { return color(d.budget); });
+
+  var legend = svg.selectAll(".legend")
+      .data(color.domain())
+    .enter().append("g")
+      .attr("class", "legend")
+      .attr("transform", function(d, i) { return "translate(0," + i * 200 + ")"; });
+
+  legend.append("rect")
+      .attr("x", width - 18)
+      .attr("width", 18)
+      .attr("height", 8)
+      .style("fill", color);
+
+  legend.append("text")
+      .attr("x", width - 24)
+      .attr("y", 9)
+      .attr("dy", ".35em")
+      .style("text-anchor", "end")
+      .text(function(d) { return d; });
+
+});
+
+</script>
+
+ -->
