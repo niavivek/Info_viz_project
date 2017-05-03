@@ -3,7 +3,20 @@
     <meta charset="utf-8">
     <title>Visualization</title>
     <link rel="stylesheet" href="scatter.css" charset="utf-8">
+    <!-- <link href='//fonts.googleapis.com/css?family=Allerta' rel='stylesheet'> -->
   </head>
+  <style>
+body {
+  /*  font-family: 'Allerta';*/
+    font-size: 18px;
+}
+
+span{
+
+  font-family: 'Allerta';font-size: 18px;
+
+}
+</style>
   <body>
 
  <!--  <nav> -->
@@ -22,14 +35,22 @@
 <a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>button</a> -->
         
 
+   
+    <div id="scatter" style="float:left;width:800px; height:440px;margin-bottom: 50px; margin-left: 10px; margin-right: 5px">
+    <span><b> 
+    </br>
+     </br>
+    This is a scatter plot that shows correlation between IMDB score rated by IMDB users and Critic ratings for every award winning/nominated movie since 1995. In addition we have tried to visualize budget of these films through a color gradient. Additionally it also visualizes awards/nominations won by each film. The size of the circle increases with increase in number of awards won by a particular film. </b> </span>
+    </div>
+    
 
-    <div id="scatter" style="float:left;width:700px; height:440px;margin-bottom: 50px; margin-left: 10px; margin-right: 5px"></div>
+
    <!--  <div id="image">
       <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTQzMjkwNTQ2OF5BMl5BanBnXkFtZTgwNTQ4MTQ4MTE@._V1_UY317_CR18,0,214,317_AL_.jpg" alt="Smiley face" height="100" width="50" style="float:right;width:300px; height:440px;margin-bottom: 10px; margin-right: 25px; margin-left: 50px; border: 20px solid ; border-color: red; border-radius: 10px">
     </div> -->
 
 
- <div id="buttons" style="float:left;width:600px; height:150px;margin-bottom: 10px; margin-right: 400px;border: 20px solid ; border-color: white; border-radius: 10px">
+ <div id="buttons" style="float:left;width:500px; height:150px;margin-bottom: 10px;margin-top: 100px; margin-right: 400px;  border-radius: 10px">
      
 
     <!-- reference: http://bl.ocks.org/peterssonjonas/4a0e7cb8d23231243e0e -->
@@ -54,9 +75,15 @@
         <input name="Submit"  type="submit" value="Search!" >
         <!-- <button type="button" onclick="alert('Hello world!')">Click Me!</button> -->
    </form> 
+
+
       </div>
 
    <div id="option1" style="float:left;width:900px; height:150px;margin-top: 10px; margin-right: 25px">
+
+   Click on any of the below genres to see movies that belong to that particular genre.
+   </br>
+   </br>
     <input name="updateButton" 
            type="button" 
            value="Adventure" 
@@ -146,14 +173,20 @@
            value="War" 
            id = "button15"
            onclick="War()" />
-
+</br>
+</br>
+</br>
            <input name="updateButton" 
            type="button" 
            value="Reset" 
            id = "button16"
            onclick="reset()" />
-</div>
 
+           <span> 
+    </span>
+</div>
+<div> 
+</div>
 
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>

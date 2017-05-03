@@ -82,12 +82,11 @@ var xMax = d3.max(data, function(d) { return d[xCat]; }) * 1.05,
       .attr("class", "d3-tip")
       .offset([-10, 0])
       .html(function(d) {
-        return "Movie: "+ d[mov]+ "<br>" + "<img src= "+ "poster_tt0017136.jpeg" 
-        + " height=" + "\"50\"" + "  width="+ "\"50\""+">"
+        return "Movie: "+ d[mov]+ "<br>" + "<img src="+ "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQzMjkwNTQ2OF5BMl5BanBnXkFtZTgwNTQ4MTQ4MTE@._V1_UY317_CR18,0,214,317_AL_.jpg" 
+        + "height=" + "\"42\"" + "  width="+ "\"42\""+">"
 
         +"<br>"+"Critic Score: " + d[xCat] + "<br>" + "IMDB Score : " 
-        + d[yCat] +  "<br>" + "Director: " + d[dir]+  "<br>" + "Budget: " + d[colorCat] + "<br>" + "Wins: " + d.Winner 
-        + "<br>"+ "Nominations: " + d.Award+ "<br>"+ "Actors: " + d.actor1_name + ", " + d.actor2_name + ", " + d.actor3_name + ", " + d.actor4_name
+        + d[yCat] +  "<br>" + "Director: " + d[dir]+  "<br>" + "Budget: " + d[colorCat] + "<br>" + "Wins: " + d.Winner ;
       });
 
   var zoomBeh = d3.behavior.zoom()
@@ -223,7 +222,7 @@ var xMax = d3.max(data, function(d) { return d[xCat]; }) * 1.05,
 
 
 
-  var w = 240, h = 450;
+  var w = 140, h = 400;
 
   var key = d3.select("body").append("svg").attr("width", w).attr("height", h);
   var legend = key.append("defs").append("svg:linearGradient").attr("id", "gradient")
@@ -233,35 +232,138 @@ var xMax = d3.max(data, function(d) { return d[xCat]; }) * 1.05,
 
   legend.append("stop").attr("offset", "100%").attr("stop-color", "#DC3C30").attr("stop-opacity", 1);
 
-  key.append("rect").attr("width", w - 220).attr("height", h - 150).
-  style("fill", "url(#gradient)").attr("transform", "translate(10,110)");
+  key.append("rect").attr("width", w - 120).attr("height", h - 100).
+  style("fill", "url(#gradient)").attr("transform", "translate(-10,50)");
 
   
   var y1 = d3.scale.linear().range([300, 0]).domain([colMax, colMin]).nice(7);       
 
   var yAxis2 = d3.svg.axis().scale(y1).orient("right");
-  
+  // y1.domain([colMax, colMin]);
+ // var legendScale = d3.scale.linear()
+ //            .domain([colMax, colMin])
+ //            .range([600, 0])
 
-  key.append("g").attr("class", "y axis").attr("transform", "translate(25,110)").
+ //        var legendAxis = d3.svg.axis()
+ //            .scale(legendScale)
+ //            .orient("right")
+            // .tickValues(d3.range(300, 0))
+            //  .tickFormat(d3.format("d"));
+
+
+  key.append("g").attr("class", "y axis").attr("transform", "translate(0,50)").
   call(yAxis2).append("text").attr("transform", "rotate(-90)").attr("y", 5).attr("dy", ".71em")
-  .style("text-anchor", "end").text('Budget').attr("transform", "rotate(360)").attr("transform", "translate(80,-10)");
+  .style("text-anchor", "end").data(colMin).enter().append("text").attr("transform", "rotate(-90)")
 
 
-var city = key.append('circle')
-      .attr("cx", 10)
-      .attr("cy", 10)
-      .attr("r", 7).attr("fill", "red").attr("stroke","black").attr("stroke-width","3")
-     .attr("transform", "translate(10,430)")
-      
-    var circ_leg = key.append("text").attr("class", "awardsize").
-    text("Size increases ").text("Award Size ").attr("transform", "translate(40,449)");
+  // create a scale and axis for the legend
+        // var legendScale = d3.scale.linear()
+        //     .domain([colMax, colMin])
+        //     .range([300, 0])
 
-      // .attr("transform", "translate(10,50)")
+        // var legendAxis = d3.svg.axis()
+        //     .scale(legendScale)
+        //     .orient("right")
+        //     // .tickValues(d3.range(-3, 4))
+        //     // .tickFormat(d3.format("d"));
+
+        // legend.append("g")
+        //     .attr("class", "legend axis")
+        //     .attr("transform", "translate(" + legendWidth + ", 0)")
+        //     .call(legendAxis);
+    // }
+
+
+  // .append("text").attr("transform", "rotate(-90)")text(colMin).attr("transform", "rotate(-90)")
+     
+  // text(function(d) { return d; }).style("text-anchor", "end")
+  // .text(function(d) { return d; }).style("text-anchor", "end")
+
+  // append("text")
+  //     .attr("x", width + 56)
+  //     .attr("y",  5)
+  //     .attr("dy", ".71em")
+  //     .text(function(d) { return d; });
+  //.style("text-anchor", "end")
+  // .text("axis title");
 
 
 
+//legend.append("text")
+  //     .attr("x", width + 56)
+  //     .attr("y",  5)
+  //     .attr("dy", ".35em")
+  //     .text(function(d) { return d; });
+
+// var legendMargin = { top: 20, bottom: 20, left: 5, right: 20 };
+
+// var legendFullWidth = 50;
+
+// var legendWidth = legendFullWidth - legendMargin.left - legendMargin.right;
 
 
+  // var legend = svg.selectAll(".legend")
+  // // .attr('width', width)
+  // //       .attr('height', height)
+  //     .data(color.domain())
+  //   .enter()
+  //   .append("g")
+  //     .classed("legend", true)
+  //     // .attr('transform', 'translate(' + legendMargin.left + ',' +
+  //     //   legendMargin.top + ')')
+  // .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+
+  // legend.append("circle")
+  //     .attr("r", 3.5)
+  //     .attr("cx", width + 20)
+  //     .attr("fill", color);
+
+  // legend.append("text")
+  //     .attr("x", width + 56)
+  //     .attr("y",  5)
+  //     .attr("dy", ".35em")
+  //     .text(function(d) { return d; });
+
+  //     legend.append("rect")
+  //     .attr("x", width + 26)
+  //     .attr("width", 20)
+  //     .attr("height", height - 350)
+  //     .style("fill", "url(#linear-gradient)");
+
+
+       // create a scale and axis for the legend
+        // var legendScale = d3.scale.linear()
+        //     .domain([-3, 3])
+        //     .range([height - 23, 0]);
+
+        // var legendAxis = d3.svg.axis()
+        //     .scale(legendScale)
+        //     .orient("right")
+        //     .tickValues(d3.range(-3, 4))
+        //     .tickFormat(d3.format("d"));
+
+        // legend.append("g")
+        //     .attr("class", "legend axis")
+        //     .attr("transform", "translate(" + legendWidth + ", 0)")
+        //     .call(legendAxis);
+    // }
+
+
+  // d3.select("input").on("click", change);
+
+  // function change() {
+  //   xCat = "Carbs";
+  //   xMax = d3.max(data, function(d) { return d[xCat]; });
+  //   xMin = d3.min(data, function(d) { return d[xCat]; });
+
+  //   zoomBeh.x(x.domain([xMin, xMax])).y(y.domain([yMin, yMax]));
+
+  //   var svg = d3.select("#scatter").transition();
+
+  //   svg.select(".x.axis").duration(750).call(xAxis).select(".label").text(xCat);
+
+  //   objects.selectAll(".dot").transition().duration(1000).attr("transform", transform);
+  // }
 
   function zoom() {
     svg.select(".x.axis").call(xAxis);
@@ -274,7 +376,36 @@ var city = key.append('circle')
   function transform(d) {
     return "translate(" + x(d[xCat]) + "," + y(d[yCat]) + ")";
   }
- 
+  // var defs = svg.append("defs");
+
+  // //Append a linearGradient element to the defs and give it a unique id
+  // var linearGradient = defs.append("linearGradient")
+  //   .attr("id", "linear-gradient");
+
+  //   linearGradient
+  //   .attr("x1", "0%")
+  //   .attr("y1", "0%")
+  //   .attr("x2", "0%")
+  //   .attr("y2", "100%");
+
+
+// range(["#e5e5ff", "#0000ff"])  "#b9e3ea", "#07a5c1"  #CAAE33", "#DC3C30"
+
+//Set the color for the start (0%)
+//    linearGradient.append("stop") 
+//     .attr("offset", "0%")   
+//     .attr("stop-color", "#CAAE33"); //light blue
+
+// //Set the color for the end (100%)  
+//     linearGradient.append("stop") 
+//     .attr("offset", "100%")   
+//     .attr("stop-color", "#DC3C30"); //dark blue
+
+    //Draw the rectangle and fill with gradient
+// svg.append("rect")
+//   .attr("width", 300)
+//   .attr("height", 20)
+//   .style("fill", "url(#linear-gradient)");
 
 });
 
