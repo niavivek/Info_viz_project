@@ -22,40 +22,149 @@ var flaredata = {
 "Julia Roberts",
 "Lupita Nyong'o",
 "Marcia Gay Harden",
+"Marion Cotillard",
 "Matthew McConaughey",
 "Melissa Leo",
 "Meryl Streep",
 "Philip Seymour Hoffman",
 "Reese Witherspoon",
 "Sandra Bullock",
-"Sean Penn"]
+"Sean Penn"],
+"movies":[
+"The Pianist",
+"The Danish Girl",
+"Girl, Interrupted",
+"The Aviator",
+"Monster",
+"The Fighter",
+"The King's Speech",
+"Lincoln",
+"The Theory of Everything",
+"The Last King of Scotland",
+"Shine",
+"The Queen",
+"Boys Don't Cry",
+"Ray",
+"Dallas Buyers Club",
+"A Beautiful Mind",
+"Iris",
+"Erin Brockovich",
+"12 Years a Slave",
+"Pollock",
+"La Vie en Rose",
+"Dallas Buyers Club",
+"The Fighter",
+"The Iron Lady",
+"Capote",
+"Walk the Line",
+"The Blind Side",
+"Milk",
+],
+"Awards":["Actor in a Leading Role",
+"Actress in a Supporting Role",
+"Actress in a Supporting Role",
+"Actress in a Supporting Role",
+"Actress in a Leading Role",
+"Actor in a Supporting Role",
+"Actor in a Leading Role",
+"Actor in a Leading Role",
+"Actor in a Leading Role",
+"Actor in a Leading Role",
+"Actor in a Leading Role",
+"Actress in a Leading Role",
+"Actress in a Leading Role",
+"Actor in a Leading Role",
+"Actor in a Supporting Role",
+"Actress in a Supporting Role",
+"Actor in a Supporting Role",
+"Actress in a Leading Role",
+"Actress in a Supporting Role",
+"Actress in a Supporting Role",
+"Actress in a Leading Role",
+"Actor in a Leading Role",
+"Actress in a Supporting Role",
+"Actress in a Leading Role",
+"Actor in a Leading Role",
+"Actress in a Leading Role",
+"Actress in a Leading Role",
+"Actor in a Leading Role",
+]
   }, {
     "type": "ditem",
     "name": "Action",
     "ditem": 1,
     "links": ["Heath Ledger",
-"Russell Crowe"]
+"Russell Crowe"],
+"movies":[
+"The Dark Knight",
+"Gladiator",
+],
+"Awards":[
+"Actor in a Supporting Role",
+"Actor in a Leading Role",]
   }, {
     "type": "ditem",
     "name": "Adventure",
     "ditem": 2,
     "links": ["Christoph Waltz",
 "Leonardo DiCaprio",
-"Renee Zellweger"]
-  }, {
+"Renee Zellweger"],
+ "movies":["Inglourious Basterds",
+"The Revenant",
+"Cold Mountain",
+ ],
+ "Awards":[
+ "Actor in a Supporting Role",
+"Actor in a Leading Role",
+"Actress in a Supporting Role",]
+  },
+  {
     "type": "ditem",
     "name": "Comedy",
     "ditem": 3,
     "links": ["Alan Arkin",
 "Catherine Zeta-Jones",
+"Chris Cooper",
 "Christopher Plummer",
 "Cuba Gooding, Jr.",
+"Emma Stone",
 "Gwyneth Paltrow",
 "Helen Hunt",
 "Jack Nicholson",
 "Jean Dujardin",
 "Jennifer Lawrence",
-"Judi Dench"]
+"Judi Dench",
+"Mira Sorvino",
+"Roberto Benigni",],
+"movies":["Little Miss Sunshine",
+"Chicago",
+"Adaptation",
+"Beginners",
+"Jerry Maguire",
+" La La Land  ",
+"Shakespeare in Love",
+"As Good as It Gets",
+"As Good as It Gets",
+"The Artist",
+"Silver Linings Playbook",
+"Shakespeare in Love",
+"Mighty Aphrodite",
+"Life Is Beautiful",],
+"Awards":[
+"Actor in a Supporting Role",
+"Actress in a Supporting Role",
+"Actor in a Supporting Role",
+"Actor in a Supporting Role",
+"Actor in a Supporting Role",
+"Actress in a Leading Role",
+"Actress in a Leading Role",
+"Actress in a Leading Role",
+"Actor in a Leading Role",
+"Actor in a Leading Role",
+"Actress in a Leading Role",
+"Actress in a Supporting Role",
+"Actress in a Supporting Role",
+"Actor in a Leading Role",]
   }, {
     "type": "ditem",
     "name": "Crime",
@@ -69,44 +178,84 @@ var flaredata = {
 "Sean Penn",
 "Susan Sarandon",
 "Tilda Swinton",
-"Tim Robbins","Catherine Zeta-Jones",
+"Tim Robbins",
 "Charlize Theron",
-"Heath Ledger",
+"Catherine Zeta-Jones",
 "Hilary Swank",
-"Philip Seymour Hoffman"]
+"Heath Ledger",
+"Philip Seymour Hoffman",],
+"movies":["Traffic",
+"Training Day",
+"Fargo",
+"No Country for Old Men",
+"The Usual Suspects",
+"L.A. Confidential",
+"Mystic River",
+"Dead Man Walking",
+"Michael Clayton",
+"Mystic River","Monster",
+"Chicago",
+"Boys Don't Cry",
+"The Dark Knight",
+"Capote",],
+"Awards":[
+"Actor in a Supporting Role",
+"Actor in a Leading Role",
+"Actress in a Leading Role",
+"Actor in a Supporting Role",
+"Actor in a Supporting Role",
+"Actress in a Supporting Role",
+"Actor in a Leading Role",
+"Actress in a Leading Role",
+"Actress in a Supporting Role",
+"Actor in a Supporting Role",
+"Actress in a Leading Role",
+"Actress in a Supporting Role",
+"Actress in a Leading Role",
+"Actor in a Supporting Role",
+"Actor in a Leading Role",]
   }, {
     "type": "ditem",
     "name": "Drama",
     "ditem": 5,
-    "links": ["Brie Larson",
+    "links": ["Anne Hathaway",
+"Brie Larson",
+"Casey Affleck",
 "Cate Blanchett",
 "Christoph Waltz",
 "Daniel Day-Lewis",
 "George Clooney",
-"George Clooney",
 "Halle Berry",
 "Hilary Swank",
 "J.K. Simmons",
+"James Coburn",
 "Jeff Bridges",
 "Jennifer Hudson",
 "Julianne Moore",
 "Juliette Binoche",
 "Kate Winslet",
 "Kevin Spacey",
+"Mahershala Ali",
 "Mark Rylance",
+"Michael Caine",
+"Mo'Nique",
 "Morgan Freeman",
 "Natalie Portman",
 "Nicolas Cage",
 "Nicole Kidman",
 "Octavia Spencer",
 "Patricia Arquette",
-"Penalope Cruz",
+"Penelope Cruz",
 "Rachel Weisz",
-"Robin Williams","Adrien Brody",
+"Robin Williams",
+"Viola Davis ",
+"Adrien Brody",
 "Alan Arkin",
+"Alicia Vikander",
 "Angelina Jolie",
 "Benicio Del Toro",
 "Cate Blanchett",
+"Chris Cooper",
 "Christian Bale",
 "Christoph Waltz",
 "Christopher Plummer",
@@ -115,6 +264,7 @@ var flaredata = {
 "Daniel Day-Lewis",
 "Denzel Washington",
 "Eddie Redmayne",
+"Emma Stone ",
 "Forest Whitaker",
 "Frances McDormand",
 "Geoffrey Rush",
@@ -136,21 +286,186 @@ var flaredata = {
 "Leonardo DiCaprio",
 "Lupita Nyong'o",
 "Marcia Gay Harden",
+"Marion Cotillard",
 "Matthew McConaughey",
 "Melissa Leo",
 "Meryl Streep",
 "Reese Witherspoon",
-"Renee Zellweger",
+"RenåÕÌÝÌ_å©e Zellweger",
+"Roberto Benigni",
 "Russell Crowe",
 "Sandra Bullock",
 "Sean Penn",
 "Sean Penn",
 "Susan Sarandon",
 "Tilda Swinton",
-"Tim Robbins","Charlize Theron",
-"Heath Ledger",
-"Hilary Swank",
-"Philip Seymour Hoffman"]
+"Tim Robbins",],
+"movies":["Les Miserables",
+"Room",
+" Manchester by the Sea  ",
+"Blue Jasmine",
+"Django Unchained",
+"There Will Be Blood",
+"Syriana",
+"Syriana",
+"Monster's Ball",
+"Million Dollar Baby",
+"Whiplash",
+"Affliction",
+"Crazy Heart",
+"Dreamgirls",
+"Still Alice",
+"The English Patient",
+"The Reader",
+"American Beauty",
+" Moonlight  ",
+"Bridge of Spies",
+"The Cider House Rules",
+"Precious: Based on the Novel 'Push' by Sapphire",
+"Million Dollar Baby",
+"Black Swan",
+"Leaving Las Vegas",
+"The Hours",
+"The Help",
+"Boyhood",
+"Vicky Cristina Barcelona",
+"The Constant Gardener",
+"Good Will Hunting",
+" Fences  ",
+"The Pianist",
+"Little Miss Sunshine",
+"The Danish Girl",
+"Girl, Interrupted",
+"Traffic",
+"The Aviator",
+"Adaptation",
+"The Fighter",
+"Inglourious Basterds",
+"Beginners",
+"The King's Speech",
+"Jerry Maguire",
+"Lincoln",
+"Training Day",
+"The Theory of Everything",
+" La La Land  ",
+"The Last King of Scotland",
+"Fargo",
+"Shine",
+"Shakespeare in Love",
+"As Good as It Gets",
+"The Queen",
+"As Good as It Gets",
+"Ray",
+"Dallas Buyers Club",
+"No Country for Old Men",
+"The Artist",
+"A Beautiful Mind",
+"Silver Linings Playbook",
+"Iris",
+"Shakespeare in Love",
+"Erin Brockovich",
+"The Usual Suspects",
+"L.A. Confidential",
+"The Revenant",
+"12 Years a Slave",
+"Pollock",
+"La Vie en Rose",
+"Dallas Buyers Club",
+"The Fighter",
+"The Iron Lady",
+"Walk the Line",
+"Cold Mountain",
+"Life Is Beautiful",
+"Gladiator",
+"The Blind Side",
+"Mystic River",
+"Milk",
+"Dead Man Walking",
+"Michael Clayton",
+"Mystic River",],
+"Awards":["Actress in a Supporting Role",
+"Actress in a Leading Role",
+"Actor in a Leading Role",
+"Actress in a Leading Role",
+"Actor in a Supporting Role",
+"Actor in a Leading Role",
+"Actor in a Supporting Role",
+"Actor in a Supporting Role",
+"Actress in a Leading Role",
+"Actress in a Leading Role",
+"Actor in a Supporting Role",
+"Actor in a Supporting Role",
+"Actor in a Leading Role",
+"Actress in a Supporting Role",
+"Actress in a Leading Role",
+"Actress in a Supporting Role",
+"Actress in a Leading Role",
+"Actor in a Leading Role",
+"Actor in a Supporting Role",
+"Actor in a Supporting Role",
+"Actor in a Supporting Role",
+"Actress in a Supporting Role",
+"Actor in a Supporting Role",
+"Actress in a Leading Role",
+"Actor in a Leading Role",
+"Actress in a Leading Role",
+"Actress in a Supporting Role",
+"Actress in a Supporting Role",
+"Actress in a Supporting Role",
+"Actress in a Supporting Role",
+"Actor in a Supporting Role",
+"Actress in a Supporting Role",
+"Actor in a Leading Role",
+"Actor in a Supporting Role",
+"Actress in a Supporting Role",
+"Actress in a Supporting Role",
+"Actor in a Supporting Role",
+"Actress in a Supporting Role",
+"Actor in a Supporting Role",
+"Actor in a Supporting Role",
+"Actor in a Supporting Role",
+"Actor in a Supporting Role",
+"Actor in a Leading Role",
+"Actor in a Supporting Role",
+"Actor in a Leading Role",
+"Actor in a Leading Role",
+"Actor in a Leading Role",
+"Actress in a Leading Role",
+"Actor in a Leading Role",
+"Actress in a Leading Role",
+"Actor in a Leading Role",
+"Actress in a Leading Role",
+"Actress in a Leading Role",
+"Actress in a Leading Role",
+"Actor in a Leading Role",
+"Actor in a Leading Role",
+"Actor in a Supporting Role",
+"Actor in a Supporting Role",
+"Actor in a Leading Role",
+"Actress in a Supporting Role",
+"Actress in a Leading Role",
+"Actor in a Supporting Role",
+"Actress in a Supporting Role",
+"Actress in a Leading Role",
+"Actor in a Supporting Role",
+"Actress in a Supporting Role",
+"Actor in a Leading Role",
+"Actress in a Supporting Role",
+"Actress in a Supporting Role",
+"Actress in a Leading Role",
+"Actor in a Leading Role",
+"Actress in a Supporting Role",
+"Actress in a Leading Role",
+"Actress in a Leading Role",
+"Actress in a Supporting Role",
+"Actor in a Leading Role",
+"Actor in a Leading Role",
+"Actress in a Leading Role",
+"Actor in a Leading Role",
+"Actor in a Leading Role",
+"Actress in a Leading Role",
+"Actress in a Supporting Role",
+"Actor in a Supporting Role",]
   }, {
     "type": "ditem",
     "name": "History",
@@ -161,25 +476,76 @@ var flaredata = {
 "Lupita Nyong'o",
 "Meryl Streep",
 "Renee Zellweger",
-"Sean Penn"]
+"Sean Penn"],
+"movies":["Bridge of Spies","The King's Speech",
+"Lincoln",
+"The Last King of Scotland",
+"12 Years a Slave",
+"The Iron Lady",
+"Cold Mountain",
+"Milk",],
+"Awards":["Actor in a Supporting Role",
+"Actor in a Leading Role",
+"Actor in a Leading Role",
+"Actor in a Leading Role",
+"Actress in a Supporting Role",
+"Actress in a Leading Role",
+"Actress in a Supporting Role",
+"Actor in a Leading Role",]
   }, {
     "type": "ditem",
     "name": "Music",
     "ditem": 7,
     "links": ["J.K. Simmons",
 "Jeff Bridges",
-"Jennifer Hudson","Geoffrey Rush",
+"Jennifer Hudson",
+"Emma Stone ",
+"Geoffrey Rush",
 "Jamie Foxx",
-"Reese Witherspoon"]
+"Marion Cotillard",
+"Reese Witherspoon",],
+"movies":["Whiplash",
+"Crazy Heart",
+"Dreamgirls",
+" La La Land  ",
+"Shine",
+"Ray",
+"La Vie en Rose",
+"Walk the Line",],
+"Awards":[
+"Actor in a Supporting Role",
+"Actor in a Leading Role",
+"Actress in a Supporting Role",
+"Actress in a Leading Role",
+"Actor in a Leading Role",
+"Actor in a Leading Role",
+"Actress in a Leading Role",
+"Actress in a Leading Role",]
   }, {
     "type": "ditem",
     "name": "Mystery",
     "ditem": 8,
-    "links": ["Rachel Weisz","Kevin Spacey",
+    "links": ["James Coburn",
+"Rachel Weisz",
+"Kevin Spacey",
 "Kim Basinger",
 "Sean Penn",
 "Tilda Swinton",
-"Tim Robbins"]
+"Tim Robbins",],
+"movies":["Affliction",
+"The Constant Gardener",
+"The Usual Suspects",
+"L.A. Confidential",
+"Mystic River",
+"Michael Clayton",
+"Mystic River",],
+"Awards":["Actor in a Supporting Role",
+"Actress in a Supporting Role",
+"Actor in a Supporting Role",
+"Actress in a Supporting Role",
+"Actor in a Leading Role",
+"Actress in a Supporting Role",
+"Actor in a Supporting Role",]
   }, {
     "type": "ditem",
     "name": "Romance",
@@ -187,9 +553,12 @@ var flaredata = {
     "links": ["Halle Berry",
 "Juliette Binoche",
 "Kate Winslet",
+"Michael Caine",
 "Nicolas Cage",
 "Nicole Kidman",
-"Penalope Cruz","Christopher Plummer",
+"Penelope Cruz","Alicia Vikander",
+"Anne Hathaway",
+"Christopher Plummer",
 "Cuba Gooding, Jr.",
 "Eddie Redmayne",
 "Gwyneth Paltrow",
@@ -200,691 +569,149 @@ var flaredata = {
 "Jennifer Lawrence",
 "Jim Broadbent",
 "Judi Dench",
+"Mira Sorvino",
 "Rachel Weisz",
-"Russell Crowe"]
+"Russell Crowe",
+"Colin Firth",
+"Geoffrey Rush",
+"Hilary Swank",
+"Reese Witherspoon",
+"Renee Zellweger",],
+"movies":[
+"Monster's Ball",
+"The English Patient",
+"The Reader",
+"The Cider House Rules",
+"Leaving Las Vegas",
+"The Hours",
+"Vicky Cristina Barcelona",
+"The Danish Girl",
+"Les Miserables",
+"Beginners",
+"Jerry Maguire",
+"The Theory of Everything",
+"Shakespeare in Love",
+"As Good as It Gets",
+"As Good as It Gets",
+"The Artist",
+"Crazy Heart",
+"Silver Linings Playbook",
+"Iris",
+"Shakespeare in Love",
+"Mighty Aphrodite",
+"The Constant Gardener",
+"Gladiator",
+"The King's Speech",
+"Shine",
+"Boys Don't Cry",
+"Walk the Line",
+"Cold Mountain",],
+"Awards":[
+"Actress in a Leading Role",
+"Actress in a Supporting Role",
+"Actress in a Leading Role",
+"Actor in a Supporting Role",
+"Actor in a Leading Role",
+"Actress in a Leading Role",
+"Actress in a Supporting Role",
+"Actress in a Supporting Role",
+"Actress in a Supporting Role",
+"Actor in a Supporting Role",
+"Actor in a Supporting Role",
+"Actor in a Leading Role",
+"Actress in a Leading Role",
+"Actress in a Leading Role",
+"Actor in a Leading Role",
+"Actor in a Leading Role",
+"Actor in a Leading Role",
+"Actress in a Leading Role",
+"Actor in a Supporting Role",
+"Actress in a Supporting Role",
+"Actress in a Supporting Role",
+"Actress in a Supporting Role",
+"Actor in a Leading Role",
+"Actor in a Leading Role",
+"Actor in a Leading Role",
+"Actress in a Leading Role",
+"Actress in a Leading Role",
+"Actress in a Supporting Role",]
   }, {
     "type": "ditem",
     "name": "Sport",
     "ditem": 10,
     "links": ["Hilary Swank",
-"Morgan Freeman","Russell Crowe",
+"Morgan Freeman",
 "Christian Bale",
 "Melissa Leo",
-"Sandra Bullock"]
+"Sandra Bullock",
+"Cuba Gooding, Jr.",],
+"movies":["Million Dollar Baby",
+"Million Dollar Baby",
+"The Fighter",
+"The Fighter",
+"The Blind Side",
+"Jerry Maguire",],
+"Awards":["Actress in a Leading Role",
+"Actor in a Supporting Role",
+"Actor in a Supporting Role",
+"Actress in a Supporting Role",
+"Actress in a Leading Role",
+"Actor in a Supporting Role",]
   }, {
     "type": "ditem",
     "name": "Thriller",
     "ditem": 11,
     "links": ["George Clooney",
-"George Clooney",
 "Natalie Portman","Benicio Del Toro",
 "Denzel Washington",
 "Frances McDormand",
 "Javier Bardem",
 "Leonardo DiCaprio",
-"Mark Rylance"]
+"Mark Rylance"],
+"movies":["Syriana",
+"Black Swan",],
+"Awards":["Actor in a Supporting Role",
+"Actress in a Leading Role",]
   }, {
     "type": "ditem",
     "name": "Western",
     "ditem": 12,
-    "links": ["Christoph Waltz"]
+    "links": ["Christoph Waltz","Leonardo DiCaprio"],
+    "movies":["Django Unchained","The Revenant",],
+    "Awards":["Actor in a Supporting Role","Actor in a Leading Role",]
   }, {
     "type": "ditem",
     "name": "Musical",
     "ditem": 13,
-    "links": ["Catherine Zeta-Jones",
-"Jennifer Hudson"]
+    "links": ["Anne Hathaway","Catherine Zeta-Jones",
+"Jennifer Hudson"],
+"movies":["Les Miserables"],
+"Awards":["Actress in a Supporting Role"]
   }, {
     "type": "ditem",
     "name": "War",
     "ditem": 14,
     "links": ["Adrien Brody",
 "Christoph Waltz",
-"Juliette Binoche"]
+"Juliette Binoche",
+"Roberto Benigni",
+"Daniel Day-Lewis",
+"Renee Zellweger"],
+"movies":["The Pianist",
+"Inglourious Basterds",
+"The English Patient",
+"Life Is Beautiful",
+"Lincoln",
+"Cold Mountain",],
+"Awards":["Actor in a Leading Role",
+"Actor in a Supporting Role",
+"Actress in a Supporting Role",
+"Actor in a Leading Role",
+"Actor in a Leading Role",
+"Actress in a Supporting Role",]
   }],
 
-  "themes": [{
-    "type": "theme",
-    "name": "Adrien Brody",
-    "description": "",
-    "slug": "Adrien Brody"
-  },  {
-    "type": "theme",
-    "name": "Angelina Jolie",
-    "description": "",
-    "slug": "Angelina Jolie"
-  }, {
-    "type": "theme",
-    "name": "Cate Blanchett",
-    "description": "",
-    "slug": "Cate Blanchett"
-  }, {
-    "type": "theme",
-    "name": "Charlize Theron",
-    "description": "",
-    "slug": "Charlize Theron"
-  }, {
-    "type": "theme",
-    "name": "Christian Bale",
-    "description": "",
-    "slug": "Christian Bale"
-  },{
-    "type": "theme",
-    "name": "Colin Firth",
-    "description": "",
-    "slug": "Colin Firth"
-  }, {
-    "type": "theme",
-    "name": "Daniel Day-Lewis",
-    "description": "",
-    "slug": "Daniel Day-Lewis"
-  }, {
-    "type": "theme",
-    "name": "Eddie Redmayne",
-    "description": "",
-    "slug": "Eddie Redmayne"
-  }, {
-    "type": "theme",
-    "name": "Forest Whitaker",
-    "description": "",
-    "slug": "Forest Whitaker"
-  }, {
-    "type": "theme",
-    "name": "Geoffrey Rush",
-    "description": "",
-    "slug": "Geoffrey Rush"
-  }, {
-    "type": "theme",
-    "name": "Helen Mirren",
-    "description": "",
-    "slug": "Helen Mirren"
-  }, {
-    "type": "theme",
-    "name": "Hilary Swank",
-    "description": "",
-    "slug": "Hilary Swank"
-  }, {
-    "type": "theme",
-    "name": "Jamie Foxx",
-    "description": "",
-    "slug": "Jamie Foxx"
-  }, {
-    "type": "theme",
-    "name": "Jared Leto",
-    "description": "",
-    "slug": "Jared Leto"
-  },
-  {
-    "type": "theme",
-    "name": "Jennifer Connelly",
-    "description": "",
-    "slug": "Jennifer Connelly"
-  },{
-    "type": "theme",
-    "name": "Jim Broadbent",
-    "description": "",
-    "slug": "Jim Broadbent"
-  }, 
-  {"type": "theme",
-    "name": "Julia Roberts",
-    "description": "",
-    "slug": "Julia Roberts"
-  }, 
-  { "type": "theme",
-    "name": "Lupita Nyong'o",
-    "description": "",
-    "slug": "Lupita Nyong'o"
-  }, 
-  {  "type": "theme",
-    "name": "Marcia Gay Harden",
-    "description": "",
-    "slug": "Marcia Gay Harden"
-  },  
-  {"type": "theme",
-    "name": "Matthew McConaughey",
-    "description": "",
-    "slug": "Matthew McConaughey"
-  },
-  {  "type": "theme",
-    "name": "Melissa Leo",
-    "description": "",
-    "slug": "Melissa Leo"
-  },  
-
-  {"type": "theme",
-    "name": "Meryl Streep",
-    "description": "",
-    "slug": "Meryl Streep"
-  },  
-  {"type": "theme",
-    "name": "Philip Seymour Hoffman",
-    "description": "",
-    "slug": "Philip Seymour Hoffman"
-  }, 
-  { "type": "theme",
-    "name": "Reese Witherspoon",
-    "description": "",
-    "slug": "Reese Witherspoon"
-  }, 
-  { "type": "theme",
-    "name": "Sandra Bullock",
-    "description": "",
-    "slug": "Sandra Bullock"
-  }, 
-  { "type": "theme",
-    "name": "Sean Penn",
-    "description": "",
-    "slug": "Sean Penn"
-  }
-  , 
-  { "type": "theme",
-    "name": "Heath Ledger",
-    "description": "",
-    "slug": "Heath Ledger"
-  }, 
-  { "type": "theme",
-    "name": "Russell Crowe",
-    "description": "",
-    "slug": "Russell Crowe"
-  }, 
-  { "type": "theme",
-    "name": "Christoph Waltz",
-    "description": "",
-    "slug": "Christoph Waltz"
-  }, 
-  { "type": "theme",
-    "name": "Leonardo DiCaprio",
-    "description": "",
-    "slug": "Leonardo DiCaprio"
-  }, 
-  { "type": "theme",
-    "name": "Renee Zellweger",
-    "description": "",
-    "slug": "Renee Zellweger"
-  }, 
-  { "type": "theme",
-    "name": "Alan Arkin",
-    "description": "",
-    "slug": "Alan Arkin"
-  }, 
-  { "type": "theme",
-    "name": "Catherine Zeta-Jones",
-    "description": "",
-    "slug": "Catherine Zeta-Jones"
-  }, 
-  { "type": "theme",
-    "name": "Christopher Plummer",
-    "description": "",
-    "slug": "Christopher Plummer"
-  }, 
-  { "type": "theme",
-    "name": "Cuba Gooding, Jr.",
-    "description": "",
-    "slug": "Cuba Gooding, Jr."
-  }, 
-  { "type": "theme",
-    "name": "Gwyneth Paltrow",
-    "description": "",
-    "slug": "Gwyneth Paltrow"
-  }, 
-  { "type": "theme",
-    "name": "Helen Hunt",
-    "description": "",
-    "slug": "Helen Hunt"
-  }, 
-  { "type": "theme",
-    "name": "Jack Nicholson",
-    "description": "",
-    "slug": "Jack Nicholson"
-  }, 
-  { "type": "theme",
-    "name": "Jean Dujardin",
-    "description": "",
-    "slug": "Jean Dujardin"
-  }, 
-  { "type": "theme",
-    "name": "Jennifer Lawrence",
-    "description": "",
-    "slug": "Jennifer Lawrence"
-  }, 
-  { "type": "theme",
-    "name": "Judi Dench",
-    "description": "",
-    "slug": "Judi Dench"
-  }, 
-  { "type": "theme",
-    "name": "Benicio Del Toro",
-    "description": "",
-    "slug": "Benicio Del Toro"
-  }, 
-  { "type": "theme",
-    "name": "Denzel Washington",
-    "description": "",
-    "slug": "Denzel Washington"
-  }, 
-  { "type": "theme",
-    "name": "Frances McDormand",
-    "description": "",
-    "slug": "Frances McDormand"
-  }, 
-  { "type": "theme",
-    "name": "Javier Bardem",
-    "description": "",
-    "slug": "Javier Bardem"
-  }, 
-  { "type": "theme",
-    "name": "Kevin Spacey",
-    "description": "",
-    "slug": "Kevin Spacey"
-  }, 
-  { "type": "theme",
-    "name": "Kim Basinger",
-    "description": "",
-    "slug": "Kim Basinger"
-  }, 
-  { "type": "theme",
-    "name": "Susan Sarandon",
-    "description": "",
-    "slug": "Susan Sarandon"
-  }, 
-  { "type": "theme",
-    "name": "Tilda Swinton",
-    "description": "",
-    "slug": "Tilda Swinton"
-  }, 
-  { "type": "theme",
-    "name": "Tim Robbins",
-    "description": "",
-    "slug": "Tim Robbins"
-  }, 
-  { "type": "theme",
-    "name": "Brie Larson",
-    "description": "",
-    "slug": "Brie Larson"
-  }, 
-  { "type": "theme",
-    "name": "George Clooney",
-    "description": "",
-    "slug": "George Clooney"
-  }, 
-  { "type": "theme",
-    "name": "Halle Berry",
-    "description": "",
-    "slug": "Halle Berry"
-  }, 
-  { "type": "theme",
-    "name": "J.K. Simmons",
-    "description": "",
-    "slug": "J.K. Simmons"
-  }, 
-  { "type": "theme",
-    "name": "Jennifer Hudson",
-    "description": "",
-    "slug": "Jennifer Hudson"
-  }, 
-  { "type": "theme",
-    "name": "Julianne Moore",
-    "description": "",
-    "slug": "Julianne Moore"
-  }, 
-  { "type": "theme",
-    "name": "Juliette Binoche",
-    "description": "",
-    "slug": "Juliette Binoche"
-  }, 
-  { "type": "theme",
-    "name": "Kate Winslet",
-    "description": "",
-    "slug": "Kate Winslet"
-  }, 
-  { "type": "theme",
-    "name": "Mark Rylance",
-    "description": "",
-    "slug": "Mark Rylance"
-  }, 
-  { "type": "theme",
-    "name": "Morgan Freeman",
-    "description": "",
-    "slug": "Morgan Freeman"
-  }, 
-  { "type": "theme",
-    "name": "Natalie Portman",
-    "description": "",
-    "slug": "Natalie Portman"
-  }, 
-  { "type": "theme",
-    "name": "Nicolas Cage",
-    "description": "",
-    "slug": "Nicolas Cage"
-  }, 
-  { "type": "theme",
-    "name": "Nicole Kidman",
-    "description": "",
-    "slug": "Nicole Kidman"
-  }, 
-  { "type": "theme",
-    "name": "Octavia Spencer",
-    "description": "",
-    "slug": "Octavia Spencer"
-  }, 
-  { "type": "theme",
-    "name": "Patricia Arquette",
-    "description": "",
-    "slug": "Patricia Arquette"
-  }, 
-  { "type": "theme",
-    "name": "Penalope Cruz",
-    "description": "",
-    "slug": "Penalope Cruz"
-  }, 
-  { "type": "theme",
-    "name": "Rachel Weisz",
-    "description": "",
-    "slug": "Rachel Weisz"
-  }, 
-  { "type": "theme",
-    "name": "Robin Williams",
-    "description": "",
-    "slug": "Robin Williams"
-  }
-
-
-
-
-
-  // {
-  //   "type": "theme",
-  //   "name": "catalystsearchmarketing.com",
-  //   "description": "",
-  //   "slug": "catalystsearchmarketing.com-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "cmpcmm.com",
-  //   "description": "",
-  //   "slug": "cmpcmm.com-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "comparisonengines.com",
-  //   "description": "",
-  //   "slug": "comparisonengines.com-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "copperpeddler.com",
-  //   "description": "",
-  //   "slug": "copperpeddler.com-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "Fantasy",
-  //   "description": "",
-  //   "slug": "Fantasy"
-  // }, {
-  //   "type": "theme",
-  //   "name": "creatingapassiveincome.com",
-  //   "description": "",
-  //   "slug": "creatingapassiveincome.com-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "dmnews.com",
-  //   "description": "",
-  //   "slug": "dmnews.com-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "domainvader.com",
-  //   "description": "",
-  //   "slug": "domainvader.com-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "f-c-j-aaagym.info",
-  //   "description": "",
-  //   "slug": "f-c-j-aaagym.info-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "feedburner.com",
-  //   "description": "",
-  //   "slug": "feedburner.com-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "fnibolivia.org",
-  //   "description": "",
-  //   "slug": "fnibolivia.org-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "howstuffworks.com",
-  //   "description": "",
-  //   "slug": "howstuffworks.com-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "iglesiacristianaicem.org.mx",
-  //   "description": "",
-  //   "slug": "iglesiacristianaicem.org.mx-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "inc.com",
-  //   "description": "",
-  //   "slug": "inc.com-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "internetkapitaene.de",
-  //   "description": "",
-  //   "slug": "internetkapitaene.de-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "jamesgoughmd.com",
-  //   "description": "",
-  //   "slug": "jamesgoughmd.com-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "jordansalvit.com",
-  //   "description": "",
-  //   "slug": "jordansalvit.com-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "julianyland.com",
-  //   "description": "",
-  //   "slug": "julianyland.com-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "kaitsbandphotography.com",
-  //   "description": "",
-  //   "slug": "kaitsbandphotography.com-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "kidsaintcheap.com",
-  //   "description": "",
-  //   "slug": "kidsaintcheap.com-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "labtrans.ufsc.br",
-  //   "description": "",
-  //   "slug": "labtrans.ufsc.br-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "lalady.com",
-  //   "description": "",
-  //   "slug": "lalady.com-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "laokay.com",
-  //   "description": "",
-  //   "slug": "laokay.com-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "list-of-domains.org",
-  //   "description": "",
-  //   "slug": "list-of-domains.org-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "listofdomains.org",
-  //   "description": "",
-  //   "slug": "listofdomains.org-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "magnetglobal.org",
-  //   "description": "",
-  //   "slug": "magnetglobal.org-2"
-  // },  {
-  //   "type": "theme",
-  //   "name": "markmelenhorst.nl",
-  //   "description": "",
-  //   "slug": "markmelenhorst.nl-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "mattcutts.com",
-  //   "description": "",
-  //   "slug": "mattcutts.com-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "miyukisan.jp",
-  //   "description": "",
-  //   "slug": "miyukisan.jp-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "moneyaftergraduation.com",
-  //   "description": "",
-  //   "slug": "moneyaftergraduation.com-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "onwardsearch.com",
-  //   "description": "",
-  //   "slug": "onwardsearch.com-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "prnewswire.com",
-  //   "description": "",
-  //   "slug": "prnewswire.com-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "prweb.com",
-  //   "description": "",
-  //   "slug": "prweb.com-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "revana.com",
-  //   "description": "",
-  //   "slug": "revana.com-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "rimmkaufman.com",
-  //   "description": "",
-  //   "slug": "rimmkaufman.com-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "scmsdc.org",
-  //   "description": "",
-  //   "slug": "scmsdc.org-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "searchengineguide.com",
-  //   "description": "",
-  //   "slug": "searchengineguide.com-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "searchenginejournal.com",
-  //   "description": "",
-  //   "slug": "searchenginejournal.com-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "searchengineland.com",
-  //   "description": "",
-  //   "slug": "searchengineland.com-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "searchmarketingexpo.com",
-  //   "description": "",
-  //   "slug": "searchmarketingexpo.com-2"
-  // },{
-  //   "type": "theme",
-  //   "name": "Thriller",
-  //   "description": "",
-  //   "slug": "Thriller"
-  // }, {
-  //   "type": "theme",
-  //   "name": "searchmarketingstandard.com",
-  //   "description": "",
-  //   "slug": "searchmarketingstandard.com-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "sempo.org",
-  //   "description": "",
-  //   "slug": "sempo.org-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "seocompanyreviews.com",
-  //   "description": "",
-  //   "slug": "seocompanyreviews.com-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "seohunts.com",
-  //   "description": "",
-  //   "slug": "seohunts.com-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "seroundtable.com",
-  //   "description": "",
-  //   "slug": "seroundtable.com-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "smart-travel-incentives.com",
-  //   "description": "",
-  //   "slug": "smart-travel-incentives.com-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "startupgenome.co",
-  //   "description": "",
-  //   "slug": "startupgenome.co-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "teletechjobs.com",
-  //   "description": "",
-  //   "slug": "teletechjobs.com-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "thecollegeinvestor.com",
-  //   "description": "",
-  //   "slug": "thecollegeinvestor.com-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "theglobe.net",
-  //   "description": "",
-  //   "slug": "theglobe.net-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "thinkwithgoogle.com",
-  //   "description": "",
-  //   "slug": "thinkwithgoogle.com-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "topseos.co.in",
-  //   "description": "",
-  //   "slug": "topseos.co.in-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "topseos.com",
-  //   "description": "",
-  //   "slug": "topseos.com-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "webbydre.com",
-  //   "description": "",
-  //   "slug": "webbydre.com-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "weblogs.us",
-  //   "description": "",
-  //   "slug": "weblogs.us-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "westlicht.ch",
-  //   "description": "",
-  //   "slug": "westlicht.ch-2"
-  // }, {
-  //   "type": "theme",
-  //   "name": "your-daily-income.com",
-  //   "description": "",
-  //   "slug": "your-daily-income.com-2"
-  // }
-
-
+  "themes": [{"award": ["Actor in a Supporting Role"], "slug": "Michael Caine", "description": [], "type": "theme", "name": "Michael Caine", "film": ["The Cider House Rules"], "genre": ["Drama-Romance"]}, {"award": ["Actress in a Leading Role"], "slug": "Reese Witherspoon", "description": [], "type": "theme", "name": "Reese Witherspoon", "film": ["Walk the Line"], "genre": ["Biography-Drama-Music-Romance"]}, {"award": ["Actress in a Supporting Role"], "slug": "Mo'Nique", "description": [], "type": "theme", "name": "Mo'Nique", "film": ["Precious: Based on the Novel 'Push' by Sapphire"], "genre": ["Drama"]}, {"award": ["Actress in a Leading Role"], "slug": "Sandra Bullock", "description": [], "type": "theme", "name": "Sandra Bullock", "film": ["The Blind Side"], "genre": ["Biography-Drama-Sport"]}, {"award": ["Actor in a Supporting Role"], "slug": "Mark Rylance", "description": [], "type": "theme", "name": "Mark Rylance", "film": ["Bridge of Spies"], "genre": ["Drama-History-Thriller"]}, {"award": ["Actress in a Supporting Role"], "slug": "Catherine Zeta-Jones", "description": [], "type": "theme", "name": "Catherine Zeta-Jones", "film": ["Chicago"], "genre": ["Comedy-Crime-Musical"]}, {"award": ["Actress in a Leading Role"], "slug": "Helen Mirren", "description": [], "type": "theme", "name": "Helen Mirren", "film": ["The Queen"], "genre": ["Biography-Drama"]}, {"award": ["Actress in a Leading Role"], "slug": "Julia Roberts", "description": [], "type": "theme", "name": "Julia Roberts", "film": ["Erin Brockovich"], "genre": ["Biography-Drama"]}, {"award": ["Actor in a Supporting Role"], "slug": "Jim Broadbent", "description": [], "type": "theme", "name": "Jim Broadbent", "film": ["Iris"], "genre": ["Biography-Drama-Romance"]}, {"award": ["Actress in a Supporting Role"], "slug": "Mira Sorvino", "description": [], "type": "theme", "name": "Mira Sorvino", "film": ["Mighty Aphrodite"], "genre": ["Comedy-Fantasy-Romance"]}, {"award": ["Actor in a Supporting Role"], "slug": "Alan Arkin", "description": [], "type": "theme", "name": "Alan Arkin", "film": ["Little Miss Sunshine"], "genre": ["Comedy-Drama"]}, {"award": ["Actress in a Leading Role"], "slug": "Brie Larson", "description": [], "type": "theme", "name": "Brie Larson", "film": ["Room"], "genre": ["Drama"]}, {"award": ["Actress in a Supporting Role"], "slug": "Octavia Spencer", "description": [], "type": "theme", "name": "Octavia Spencer", "film": ["The Help"], "genre": ["Drama"]}, {"award": ["Actress in a Supporting Role"], "slug": "Alicia Vikander", "description": [], "type": "theme", "name": "Alicia Vikander", "film": ["The Danish Girl"], "genre": ["Biography-Drama-Romance"]}, {"award": ["Actor in a Supporting Role"], "slug": "Morgan Freeman", "description": [], "type": "theme", "name": "Morgan Freeman", "film": ["Million Dollar Baby"], "genre": ["Drama-Sport"]}, {"award": ["Actor in a Supporting Role"], "slug": "J.K. Simmons", "description": [], "type": "theme", "name": "J.K. Simmons", "film": ["Whiplash"], "genre": ["Drama-Music"]}, {"award": ["Actress in a Leading Role"], "slug": "Gwyneth Paltrow", "description": [], "type": "theme", "name": "Gwyneth Paltrow", "film": ["Shakespeare in Love"], "genre": ["Comedy-Drama-Romance"]}, {"award": ["Actor in a Leading Role"], "slug": "Matthew McConaughey", "description": [], "type": "theme", "name": "Matthew McConaughey", "film": ["Dallas Buyers Club"], "genre": ["Biography-Drama"]}, {"award": ["Actor in a Leading Role"], "slug": "Nicolas Cage", "description": [], "type": "theme", "name": "Nicolas Cage", "film": ["Leaving Las Vegas"], "genre": ["Drama-Romance"]}, {"award": ["Actor in a Supporting Role"], "slug": "George Clooney", "description": [], "type": "theme", "name": "George Clooney", "film": ["Syriana"], "genre": ["Drama-Thriller"]}, {"award": ["Actor in a Leading Role"], "slug": "Casey Affleck", "description": [], "type": "theme", "name": "Casey Affleck", "film": [" Manchester by the Sea  "], "genre": ["Drama"]}, {"award": ["Actor in a Supporting Role"], "slug": "James Coburn", "description": [], "type": "theme", "name": "James Coburn", "film": ["Affliction"], "genre": ["Drama-Mystery-Thriller"]}, {"award": ["Actress in a Leading Role"], "slug": "Jennifer Lawrence", "description": [], "type": "theme", "name": "Jennifer Lawrence", "film": ["Silver Linings Playbook"], "genre": ["Comedy-Drama-Romance"]}, {"award": ["Actress in a Leading Role"], "slug": "Susan Sarandon", "description": [], "type": "theme", "name": "Susan Sarandon", "film": ["Dead Man Walking"], "genre": ["Crime-Drama"]}, {"award": ["Actor in a Leading Role"], "slug": "Russell Crowe", "description": [], "type": "theme", "name": "Russell Crowe", "film": ["Gladiator"], "genre": ["Action-Drama-Romance"]}, {"award": ["Actor in a Leading Role"], "slug": "Roberto Benigni", "description": [], "type": "theme", "name": "Roberto Benigni", "film": ["Life Is Beautiful"], "genre": ["Comedy-Drama-War"]}, {"award": ["Actress in a Supporting Role"], "slug": "Melissa Leo", "description": [], "type": "theme", "name": "Melissa Leo", "film": ["The Fighter"], "genre": ["Biography-Drama-Sport"]}, {"award": ["Actor in a Leading Role"], "slug": "Philip Seymour Hoffman", "description": [], "type": "theme", "name": "Philip Seymour Hoffman", "film": ["Capote"], "genre": ["Biography-Crime-Drama"]}, {"award": ["Actor in a Supporting Role"], "slug": "Robin Williams", "description": [], "type": "theme", "name": "Robin Williams", "film": ["Good Will Hunting"], "genre": ["Drama"]}, {"award": ["Actress in a Supporting Role"], "slug": "Jennifer Hudson", "description": [], "type": "theme", "name": "Jennifer Hudson", "film": ["Dreamgirls"], "genre": ["Drama-Music-Musical"]}, {"award": ["Actor in a Leading Role"], "slug": "Adrien Brody", "description": [], "type": "theme", "name": "Adrien Brody", "film": ["The Pianist"], "genre": ["Biography-Drama-War"]}, {"award": ["Actor in a Leading Role"], "slug": "Jack Nicholson", "description": [], "type": "theme", "name": "Jack Nicholson", "film": ["As Good as It Gets"], "genre": ["Comedy-Drama-Romance"]}, {"award": ["Actor in a Leading Role"], "slug": "Colin Firth", "description": [], "type": "theme", "name": "Colin Firth", "film": ["The King's Speech"], "genre": ["Biography-Drama-History-Romance"]}, {"award": ["Actor in a Leading Role"], "slug": "Geoffrey Rush", "description": [], "type": "theme", "name": "Geoffrey Rush", "film": ["Shine"], "genre": ["Biography-Drama-Music-Romance"]}, {"award": ["Actress in a Leading Role"], "slug": "Emma Stone", "description": [], "type": "theme", "name": "Emma Stone", "film": [" La La Land  "], "genre": ["Comedy-Drama-Music"]}, {"award": ["Actress in a Leading Role"], "slug": "Julianne Moore", "description": [], "type": "theme", "name": "Julianne Moore", "film": ["Still Alice"], "genre": ["Drama"]}, {"award": ["Actress in a Supporting Role"], "slug": "Kim Basinger", "description": [], "type": "theme", "name": "Kim Basinger", "film": ["L.A. Confidential"], "genre": ["Crime-Drama-Mystery-Thriller"]}, {"award": ["Actress in a Supporting Role"], "slug": "Tilda Swinton", "description": [], "type": "theme", "name": "Tilda Swinton", "film": ["Michael Clayton"], "genre": ["Crime-Drama-Mystery-Thriller"]}, {"award": ["Actor in a Leading Role"], "slug": "Jeff Bridges", "description": [], "type": "theme", "name": "Jeff Bridges", "film": ["Crazy Heart"], "genre": ["Drama-Music-Romance"]}, {"award": ["Actor in a Leading Role"], "slug": "Jean Dujardin", "description": [], "type": "theme", "name": "Jean Dujardin", "film": ["The Artist"], "genre": ["Comedy-Drama-Romance"]}, {"award": ["Actress in a Leading Role"], "slug": "Natalie Portman", "description": [], "type": "theme", "name": "Natalie Portman", "film": ["Black Swan"], "genre": ["Drama-Thriller"]}, {"award": ["Actor in a Leading Role"], "slug": "Forest Whitaker", "description": [], "type": "theme", "name": "Forest Whitaker", "film": ["The Last King of Scotland"], "genre": ["Biography-Drama-History-Thriller"]}, {"award": ["Actress in a Leading Role"], "slug": "Meryl Streep", "description": [], "type": "theme", "name": "Meryl Streep", "film": ["The Iron Lady"], "genre": ["Biography-Drama-History"]}, {"award": ["Actress in a Supporting Role"], "slug": "Viola Davis", "description": [], "type": "theme", "name": "Viola Davis", "film": [" Fences  "], "genre": ["Drama"]}, {"award": ["Actor in a Supporting Role", "Actor in a Supporting Role"], "slug": "Christoph Waltz", "description": [], "type": "theme", "name": "Christoph Waltz", "film": ["Inglourious Basterds", "Django Unchained"], "genre": ["Adventure-Drama-War", "Drama-Western"]}, {"award": ["Actress in a Leading Role"], "slug": "Kate Winslet", "description": [], "type": "theme", "name": "Kate Winslet", "film": ["The Reader"], "genre": ["Drama-Romance"]}, {"award": ["Actor in a Leading Role", "Actor in a Leading Role"], "slug": "Daniel Day-Lewis", "description": [], "type": "theme", "name": "Daniel Day-Lewis", "film": ["Lincoln", "There Will Be Blood"], "genre": ["Biography-Drama-History-War", "Drama"]}, {"award": ["Actor in a Supporting Role"], "slug": "Christopher Plummer", "description": [], "type": "theme", "name": "Christopher Plummer", "film": ["Beginners"], "genre": ["Comedy-Drama-Romance"]}, {"award": ["Actor in a Supporting Role"], "slug": "Christian Bale", "description": [], "type": "theme", "name": "Christian Bale", "film": ["The Fighter"], "genre": ["Biography-Drama-Sport"]}, {"award": ["Actress in a Supporting Role"], "slug": "Angelina Jolie", "description": [], "type": "theme", "name": "Angelina Jolie", "film": ["Girl"], "genre": ["Biography-Drama"]}, {"award": ["Actress in a Supporting Role"], "slug": "Judi Dench", "description": [], "type": "theme", "name": "Judi Dench", "film": ["Shakespeare in Love"], "genre": ["Comedy-Drama-Romance"]}, {"award": ["Actress in a Supporting Role"], "slug": "Lupita Nyong'o", "description": [], "type": "theme", "name": "Lupita Nyong'o", "film": ["12 Years a Slave"], "genre": ["Biography-Drama-History"]}, {"award": ["Actress in a Leading Role"], "slug": "Charlize Theron", "description": [], "type": "theme", "name": "Charlize Theron", "film": ["Monster"], "genre": ["Biography-Crime-Drama-Thriller"]}, {"award": ["Actor in a Leading Role"], "slug": "Denzel Washington", "description": [], "type": "theme", "name": "Denzel Washington", "film": ["Training Day"], "genre": ["Crime-Drama-Thriller"]}, {"award": ["Actor in a Supporting Role"], "slug": "Heath Ledger", "description": [], "type": "theme", "name": "Heath Ledger", "film": ["The Dark Knight"], "genre": ["Action-Crime-Drama-Thriller"]}, {"award": ["Actress in a Supporting Role"], "slug": "Juliette Binoche", "description": [], "type": "theme", "name": "Juliette Binoche", "film": ["The English Patient"], "genre": ["Drama-Romance-War"]}, {"award": ["Actress in a Supporting Role"], "slug": "Anne Hathaway", "description": [], "type": "theme", "name": "Anne Hathaway", "film": ["Les Miserables"], "genre": ["Drama-Musical-Romance"]}, {"award": ["Actress in a Supporting Role"], "slug": "Marcia Gay Harden", "description": [], "type": "theme", "name": "Marcia Gay Harden", "film": ["Pollock"], "genre": ["Biography-Drama"]}, {"award": ["Actress in a Supporting Role"], "slug": "Penelope Cruz", "description": [], "type": "theme", "name": "Penelope Cruz", "film": ["Vicky Cristina Barcelona"], "genre": ["Drama-Romance"]}, {"award": ["Actress in a Leading Role", "Actress in a Leading Role"], "slug": "Hilary Swank", "description": [], "type": "theme", "name": "Hilary Swank", "film": ["Million Dollar Baby", "Boys Don't Cry"], "genre": ["Drama-Sport", "Biography-Crime-Drama-Romance"]}, {"award": ["Actor in a Leading Role"], "slug": "Jamie Foxx", "description": [], "type": "theme", "name": "Jamie Foxx", "film": ["Ray"], "genre": ["Biography-Drama-Music"]}, {"award": ["Actor in a Supporting Role"], "slug": "Tim Robbins", "description": [], "type": "theme", "name": "Tim Robbins", "film": ["Mystic River"], "genre": ["Crime-Drama-Mystery-Thriller"]}, {"award": ["Actor in a Supporting Role"], "slug": "Mahershala Ali", "description": [], "type": "theme", "name": "Mahershala Ali", "film": [" Moonlight  "], "genre": ["Drama"]}, {"award": ["Actress in a Leading Role"], "slug": "Marion Cotillard", "description": [], "type": "theme", "name": "Marion Cotillard", "film": ["La Vie en Rose"], "genre": ["Biography-Drama-Music"]}, {"award": ["Actor in a Supporting Role"], "slug": "Benicio Del Toro", "description": [], "type": "theme", "name": "Benicio Del Toro", "film": ["Traffic"], "genre": ["Crime-Drama-Thriller"]}, {"award": ["Actor in a Supporting Role"], "slug": "Jared Leto", "description": [], "type": "theme", "name": "Jared Leto", "film": ["Dallas Buyers Club"], "genre": ["Biography-Drama"]}, {"award": ["Actor in a Supporting Role"], "slug": "Chris Cooper", "description": [], "type": "theme", "name": "Chris Cooper", "film": ["Adaptation"], "genre": ["Comedy-Drama"]}, {"award": ["Actor in a Leading Role"], "slug": "Leonardo DiCaprio", "description": [], "type": "theme", "name": "Leonardo DiCaprio", "film": ["The Revenant"], "genre": ["Adventure-Drama-Thriller-Western"]}, {"award": ["Actor in a Leading Role", "Actor in a Leading Role"], "slug": "Sean Penn", "description": [], "type": "theme", "name": "Sean Penn", "film": ["Mystic River", "Milk"], "genre": ["Crime-Drama-Mystery-Thriller", "Biography-Drama-History"]}, {"award": ["Actress in a Leading Role"], "slug": "Helen Hunt", "description": [], "type": "theme", "name": "Helen Hunt", "film": ["As Good as It Gets"], "genre": ["Comedy-Drama-Romance"]}, {"award": ["Actress in a Supporting Role"], "slug": "Rachel Weisz", "description": [], "type": "theme", "name": "Rachel Weisz", "film": ["The Constant Gardener"], "genre": ["Drama-Mystery-Romance-Thriller"]}, {"award": ["Actress in a Supporting Role", "Actress in a Leading Role"], "slug": "Cate Blanchett", "description": [], "type": "theme", "name": "Cate Blanchett", "film": ["The Aviator", "Blue Jasmine"], "genre": ["Biography-Drama", "Drama"]}, {"award": ["Actor in a Supporting Role"], "slug": "Javier Bardem", "description": [], "type": "theme", "name": "Javier Bardem", "film": ["No Country for Old Men"], "genre": ["Crime-Drama-Thriller"]}, {"award": ["Actor in a Supporting Role"], "slug": "Cuba Gooding, Jr.", "description": [], "type": "theme", "name": "Cuba Gooding, Jr.", "film": ["Jerry Maguire"], "genre": ["Comedy-Drama-Romance-Sport"]}, {"award": ["Actor in a Supporting Role", "Actor in a Leading Role"], "slug": "Kevin Spacey", "description": [], "type": "theme", "name": "Kevin Spacey", "film": ["The Usual Suspects", "American Beauty"], "genre": ["Crime-Drama-Mystery-Thriller", "Drama"]}, {"award": ["Actress in a Supporting Role"], "slug": "Renee Zellweger", "description": [], "type": "theme", "name": "Renee Zellweger", "film": ["Cold Mountain"], "genre": ["Adventure-Drama-History-Romance-War"]}, {"award": ["Actress in a Leading Role"], "slug": "Halle Berry", "description": [], "type": "theme", "name": "Halle Berry", "film": ["Monster's Ball"], "genre": ["Drama-Romance"]}, {"award": ["Actress in a Leading Role"], "slug": "Nicole Kidman", "description": [], "type": "theme", "name": "Nicole Kidman", "film": ["The Hours"], "genre": ["Drama-Romance"]}, {"award": ["Actress in a Supporting Role"], "slug": "Patricia Arquette", "description": [], "type": "theme", "name": "Patricia Arquette", "film": ["Boyhood"], "genre": ["Drama"]}, {"award": ["Actress in a Supporting Role"], "slug": "Jennifer Connelly", "description": [], "type": "theme", "name": "Jennifer Connelly", "film": ["A Beautiful Mind"], "genre": ["Biography-Drama"]}, {"award": ["Actress in a Leading Role"], "slug": "Frances McDormand", "description": [], "type": "theme", "name": "Frances McDormand", "film": ["Fargo"], "genre": ["Crime-Drama-Thriller"]}, {"award": ["Actor in a Leading Role"], "slug": "Eddie Redmayne", "description": [], "type": "theme", "name": "Eddie Redmayne", "film": ["The Theory of Everything"], "genre": ["Biography-Drama-Romance"]}
 
   ]
 };
@@ -899,12 +726,13 @@ function plotConceptMap() {
 //ConceptMap.js
 function ConceptMap(chartElementId, infoElementId, dataJson) {
 
-  var width = document.body.clientWidth; //window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-  var height = 700; // window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+  var width = 800; //window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  var height = 500; // window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+  
   var a = width,
     c = height,
     h = c,
-    U = 200,
+    U = 100,
     K = 22,
     S = 20,
     s = 8,
@@ -912,7 +740,7 @@ function ConceptMap(chartElementId, infoElementId, dataJson) {
     J = 30,
     o = 15,
     t = 10,
-    w = 1000,
+    w = 400,
     F = "elastic",
     N = "#0da4d3";
   var T, q, x, j, H, A, P;
@@ -940,10 +768,13 @@ function ConceptMap(chartElementId, infoElementId, dataJson) {
     width: a,
     height: c,
     fill: "transparent"
-  }).on("click", O);
+  });
   var B = d.append("g").attr("class", "links"),
     f = d.append("g").attr("class", "ditems"),
     E = d.append("g").attr("class", "nodes");
+
+
+
 
   var Q = d3.select("#" + infoElementId);
 
@@ -954,6 +785,13 @@ function ConceptMap(chartElementId, infoElementId, dataJson) {
 
   /**********************/
   var outerId = [0];
+  var tooltip = d3.select("#container1")
+    .style("position", "relative")
+    .style("z-index", "10")
+    .style("visibility", "hidden")
+    .text("a simple tooltip");
+
+
   /**********************/
 
   q.forEach(function(aa) {
@@ -968,6 +806,9 @@ function ConceptMap(chartElementId, infoElementId, dataJson) {
       A.get(aa.group).push(aa);
     }
   });
+
+
+
 
   /***********Used for Node color on mouse over=Start**********/
   j = d3.map();
@@ -985,6 +826,8 @@ function ConceptMap(chartElementId, infoElementId, dataJson) {
       j.get(ac).push(aa);
       return x[ac];
     }));
+
+    
   });
   /*********Used for Node color on mouse over- End***********/
   var Z = window.location.hash.substring(1);
@@ -1001,6 +844,8 @@ function ConceptMap(chartElementId, infoElementId, dataJson) {
       G(x[aa], true)
     }
   };
+
+  
 
   function O() {
     if (L.node === null) {
@@ -1064,6 +909,7 @@ function ConceptMap(chartElementId, infoElementId, dataJson) {
         })
       })
     });
+         
     P = [];
     A.forEach(function(af, ag) {
       var ae = (ag[0].x - 90) * Math.PI / 180;
@@ -1083,6 +929,7 @@ function ConceptMap(chartElementId, infoElementId, dataJson) {
   }
 
   function G(Y, X) {
+
     if (L.node === Y && X !== true) {
       if (Y.type === "ditem") {
         window.location.href = "/" + Y.slug;
@@ -1114,6 +961,8 @@ function ConceptMap(chartElementId, infoElementId, dataJson) {
     L.node = Y;
     L.node.children = j.get(Y.canonicalKey);
     L.map = {};
+
+
     var Z = 0;
     L.node.children.forEach(function(ac) {
       L.map[ac.key] = true;
@@ -1147,6 +996,7 @@ function ConceptMap(chartElementId, infoElementId, dataJson) {
   }
 
   function n() {
+    tooltip.style("visibility", "hidden");
     k = {
       node: null,
       map: {}
@@ -1155,6 +1005,25 @@ function ConceptMap(chartElementId, infoElementId, dataJson) {
   }
 
   function g(X) {
+  
+if (X.type === "theme")
+{
+  var d = X;
+  fulltext = "";
+  var i = 0;
+  while(i<d.award.length)
+  {
+    if(i == 0){
+      fulltext = fulltext + "<b>Name:</b>  "+d.name +"<br/>";
+    }
+  fulltext = fulltext +" <b>Movie:</b> "+d.film[i]+ ", <b>Award:</b> "+d.award[i]+ ", <b>Genre:</b> "+d.genre[i]+"<br/>";
+  i++;
+  }
+  document.getElementById('container1').innerHTML = fulltext;
+  
+  tooltip.style("visibility", "visible");
+}
+
     if (k.node === X) {
       return
     }
@@ -1199,7 +1068,7 @@ function ConceptMap(chartElementId, infoElementId, dataJson) {
     b(T.get("themes"));
     C([]);
     m(P);
-    Q.html('<a href="/the-concept-map/">What\'s this?</a>');
+
     n();
     z()
   }
@@ -1241,16 +1110,17 @@ function ConceptMap(chartElementId, infoElementId, dataJson) {
   }
 
   function b(X) {
-    var X = E.selectAll(".node").data(X, u);
+    var X = E.selectAll(".node").data(X, u).on("mouseover", g).on("mouseout", n);
     var Y = X.enter().append("g").attr("transform", function(aa) {
+
       var Z = aa.parent ? aa.parent : {
         xOffset: 0,
         x: 0,
         y: 0
       };
       return "translate(" + Z.xOffset + ",0)rotate(" + (Z.x - 90) + ")translate(" + Z.y + ")"
-    }).attr("class", "node").on("mouseover", g).on("mouseout", n).on("click", G);
-    Y.append("circle").attr("r", 0);
+    }).attr("class", "node").on("mouseover", g).on("mouseout", n);
+    //Y.append("circle").attr("r", 0);
     Y.append("text").attr("stroke", "#fff").attr("stroke-width", 4).attr("class", "label-stroke");
     Y.append("text").attr("font-size", 0).attr("class", "label");
     X.transition().duration(w).ease(F).attr("transform", function(Z) {
@@ -1331,7 +1201,7 @@ function ConceptMap(chartElementId, infoElementId, dataJson) {
       })
     } else {
       if (ab && ab.type === "theme") {
-        Y.append("text").attr("fill", "#aaa").attr("text-anchor", "middle").attr("y", (o + t) * -1).text("THEME")
+        Y.append("text").attr("fill", "#aaa").attr("text-anchor", "middle").attr("y", (o + t) * -1)
       } else {
         //                if (ab && ab.type === "perspective") {
         //                    var ad = ac.selectAll(".pair").data(A.get(ab.group).filter(function (ae) {
@@ -1357,8 +1227,9 @@ function ConceptMap(chartElementId, infoElementId, dataJson) {
   }
 
   function D(Y) {
+   
     var Y = f.selectAll(".ditem").data(Y, u);
-    var X = Y.enter().append("g").attr("class", "ditem").on("mouseover", g).on("mouseout", n).on("click", G);
+    var X = Y.enter().append("g").attr("class", "ditem").on("mouseover", g).on("mouseout", n);
     X.append("rect").attr("x", U / -2).attr("y", K / -2).attr("width", U).attr("height", K).transition().duration(w).ease(F).attr("x", function(Z) {
       return Z.x
     }).attr("y", function(Z) {
